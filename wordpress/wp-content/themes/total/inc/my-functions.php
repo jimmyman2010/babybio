@@ -15,10 +15,10 @@ function get_the_content_with_formatting ($more_link_text = '(more...)', $stript
 
 function button_func( $atts, $content = "Click here" ) {
     $atts = shortcode_atts( array(
-        'color' => '#519721',
+        'color' => 'green',
         'link' => '#'
     ), $atts, 'button' );
-    $html = '<a class="button" href="' . $atts['link'] . '" style="color:' . $atts['color'] . '; border-color:' . $atts['color'] . '">' . $content . '</a>';
+    $html = '<a class="button button--' . $atts['color'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
 
     return $html;
 }

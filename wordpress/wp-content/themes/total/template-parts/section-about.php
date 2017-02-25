@@ -38,12 +38,15 @@ if(get_theme_mod('total_about_page_disable') != 'on' ){ ?>
 			<?php
 			for ($i=1; $i < 6; $i++) { 
 				$total_about_progressbar_title = get_theme_mod('total_about_progressbar_title'.$i);
+				if(ICL_LANGUAGE_CODE !== 'en'){
+					$total_about_progressbar_title = get_theme_mod('total_about_progressbar_title_2'.$i);
+				}
 				$total_about_progressbar_percentage = get_theme_mod('total_about_progressbar_percentage'.$i);
 				$total_about_progressbar_disable = get_theme_mod('total_about_progressbar_disable'.$i);
 				if(!$total_about_progressbar_disable){
 				?>
 				<div class="ht-progress">
-					<h6><?php echo esc_html($total_about_progressbar_title); ?></h6>
+					<h6><?php echo ($total_about_progressbar_title); ?></h6>
 					<div class="ht-progress-bar">
 						<div class="ht-progress-bar-length" style="width:<?php echo absint($total_about_progressbar_percentage); ?>%">
 							<span><?php echo absint($total_about_progressbar_percentage)."%"; ?></span>
@@ -64,6 +67,9 @@ if(get_theme_mod('total_about_page_disable') != 'on' ){ ?>
 				dynamic_sidebar($total_about_widget);
 			}else{
 				$total_about_image = get_theme_mod('total_about_image');
+				if(ICL_LANGUAGE_CODE !== 'en'){
+					$total_about_image = get_theme_mod('total_about_image_2');
+				}
 				echo '<img alt="'. esc_html(get_the_title()) .'" src="'.esc_url($total_about_image).'"/>';
 			}
 		?>

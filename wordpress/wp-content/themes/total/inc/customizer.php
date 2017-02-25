@@ -5,6 +5,8 @@
  * @package Total
  */
 
+const LANG_2 = ' 2';
+
 /**
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
@@ -144,7 +146,7 @@ function total_customize_register( $wp_customize ) {
 	);
 
 	//SLIDERS
-	for ( $i=1; $i < 4; $i++ ){
+	for ( $i=1; $i < 6; $i++ ){
 
 		$wp_customize->add_setting(
 			'total_slider_heading'.$i,
@@ -312,6 +314,23 @@ function total_customize_register( $wp_customize ) {
 		);
 
 		$wp_customize->add_setting(
+			'total_about_progressbar_title_2'.$i,
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default'			=> sprintf( __( 'Progress Bar %d', 'total') , $i )
+			)
+		);
+		$wp_customize->add_control(
+			'total_about_progressbar_title_2'.$i,
+			array(
+				'settings'		=> 'total_about_progressbar_title_2'.$i,
+				'section'		=> 'total_about_section',
+				'type'			=> 'text',
+				'label'			=> __( 'Title' . LANG_2, 'total' )
+			)
+		);
+
+		$wp_customize->add_setting(
 			'total_about_progressbar_percentage'.$i,
 			array(
 				'sanitize_callback' => 'total_sanitize_choices',
@@ -368,6 +387,25 @@ function total_customize_register( $wp_customize ) {
 		            'description' => __('Recommended Image Size: 500X600px', 'total')
 		        )
 		    )
+		);
+
+		$wp_customize->add_setting(
+			'total_about_image_2',
+			array(
+				'sanitize_callback' => 'esc_url_raw'
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'total_about_image_2',
+				array(
+					'section' => 'total_about_section',
+					'settings' => 'total_about_image_2',
+					'description' => __('Recommended Image Size: 500X600px', 'total')
+				)
+			)
 		);
 
 		$wp_customize->add_setting(

@@ -21,7 +21,7 @@ if(get_theme_mod('total_featured_section_disable') != 'on' ){ ?>
 			<?php } ?>
 
 			<?php if($total_featured_sub_title){ ?>
-			<div class="ht-section-tagline"><?php echo esc_html($total_featured_sub_title); ?></div>
+			<div class="ht-section-tagline"><?php echo ($total_featured_sub_title); ?></div>
 			<?php } ?>
 			</div>
 		<?php } ?>

@@ -30,11 +30,11 @@
 				
 					<div class="ht-slide-caption">
 						<div class="ht-slide-cap-title animated fadeInDown">
-							<span><?php echo esc_html(get_the_title()); ?></span>
+							<span><?php echo get_the_title(); ?></span>
 						</div>
 
 						<div class="ht-slide-cap-desc animated fadeInDown">
-							<?php echo esc_html(get_the_content()); ?>
+							<?php echo get_the_content_with_formatting(); ?>
 						</div>
 					</div>
 				</div>

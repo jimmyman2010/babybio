@@ -321,3 +321,9 @@ require get_template_directory() . '/inc/font-awesome-list.php';
  * Dynamic Styles additions.
  */
 require get_template_directory() . '/inc/style.php';
+
+/**
+ * Shortcode additions.
+ */
+require get_template_directory() . '/inc/my-functions.php';
+

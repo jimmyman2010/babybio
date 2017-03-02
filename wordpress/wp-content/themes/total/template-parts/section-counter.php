@@ -18,11 +18,11 @@ if(get_theme_mod('total_counter_section_disable') != 'on' ){ ?>
     		?>
     			<div class="ht-section-title-tagline">
     				<?php if($total_counter_title){ ?>
-    				<h2 class="ht-section-title"><?php echo esc_html($total_counter_title); ?></h2>
+    				<h2 class="ht-section-title"><?php echo ($total_counter_title); ?></h2>
     				<?php } ?>
     
     				<?php if($total_counter_sub_title){ ?>
-    				<div class="ht-section-tagline"><?php echo esc_html($total_counter_sub_title); ?></div>
+    				<div class="ht-section-tagline"><?php echo ($total_counter_sub_title); ?></div>
     				<?php } ?>
     			</div>
     		<?php } ?>
@@ -45,7 +45,7 @@ if(get_theme_mod('total_counter_section_disable') != 'on' ){ ?>
     						</div>
     
     						<h6 class="ht-counter-title">
-    							<?php echo esc_html($total_counter_title); ?>
+    							<?php echo ($total_counter_title); ?>
     						</h6>
     					</div>
     					<?php

@@ -17,11 +17,11 @@ if(get_theme_mod('total_portfolio_section_disable') != 'on' ){ ?>
 	<div class="ht-section-title-tagline">
 		<?php 
 		if($total_portfolio_title){ ?>
-		<h2 class="ht-section-title"><?php echo esc_html($total_portfolio_title); ?></h2>
+		<h2 class="ht-section-title"><?php echo ($total_portfolio_title); ?></h2>
 		<?php } ?>
 
 		<?php if($total_portfolio_sub_title){ ?>
-		<div class="ht-section-tagline"><?php echo esc_html($total_portfolio_sub_title); ?></div>
+		<div class="ht-section-tagline"><?php echo ($total_portfolio_sub_title); ?></div>
 		<?php } ?>
 	</div>
 	<?php } ?>

@@ -17,7 +17,7 @@ if(get_theme_mod('total_featured_section_disable') != 'on' ){ ?>
 			<div class="ht-section-title-tagline">
 			<?php
 			if($total_featured_title){ ?>
-			<h2 class="ht-section-title"><?php echo esc_html($total_featured_title); ?></h2>
+			<h2 class="ht-section-title"><?php echo ($total_featured_title); ?></h2>
 			<?php } ?>
 
 			<?php if($total_featured_sub_title){ ?>

@@ -14,11 +14,11 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 		<?php if( $total_team_title || $total_team_sub_title ){ ?>
 			<div class="ht-section-title-tagline">
 				<?php if($total_team_title){ ?>
-				<h2 class="ht-section-title"><?php echo esc_html($total_team_title); ?></h2>
+				<h2 class="ht-section-title"><?php echo ($total_team_title); ?></h2>
 				<?php } ?>
 
 				<?php if($total_team_sub_title){ ?>
-				<div class="ht-section-tagline"><?php echo esc_html($total_team_sub_title); ?></div>
+				<div class="ht-section-tagline"><?php echo ($total_team_sub_title); ?></div>
 				<?php } ?>
 			</div>
 		<?php } ?>
@@ -60,7 +60,7 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
                                         <h6><?php the_title(); ?></h6>
 								
         								<?php if($total_team_designation){ ?>
-        									<div class="ht-team-designation"><?php echo esc_html($total_team_designation); ?></div>
+        									<div class="ht-team-designation"><?php echo ($total_team_designation); ?></div>
         								<?php }
                                     
 										if(has_excerpt()){

@@ -20,11 +20,11 @@ if(get_theme_mod('total_cta_section_disable') != 'on' ){ ?>
     		<?php if($total_cta_title || $total_cta_sub_title){ ?>
     		<div class="ht-section-title-tagline">
     		<?php if($total_cta_title){ ?>
-    		<h2 class="ht-section-title"><?php echo esc_html($total_cta_title); ?></h2>
+    		<h2 class="ht-section-title"><?php echo ($total_cta_title); ?></h2>
     		<?php } ?>
     
     		<?php if($total_cta_sub_title){ ?>
-    		<div class="ht-section-tagline"><?php echo esc_html($total_cta_sub_title); ?></div>
+    		<div class="ht-section-tagline"><?php echo ($total_cta_sub_title); ?></div>
     		<?php } ?>
     		</div>
     		<?php } ?>
@@ -35,11 +35,11 @@ if(get_theme_mod('total_cta_section_disable') != 'on' ){ ?>
     		<div class="ht-cta-buttons">
     
     		<?php if($total_cta_button1_link){ ?>
-    		<a class="ht-cta-button1" href="<?php echo esc_url($total_cta_button1_link); ?>"><?php echo esc_html($total_cta_button1_text); ?></a>
+    		<a class="ht-cta-button1" href="<?php echo esc_url($total_cta_button1_link); ?>"><?php echo ($total_cta_button1_text); ?></a>
     		<?php } ?>
     
     		<?php if($total_cta_button2_link){ ?>
-    		<a class="ht-cta-button2" href="<?php echo esc_url($total_cta_button2_link); ?>"><?php echo esc_html($total_cta_button2_text); ?></a>
+    		<a class="ht-cta-button2" href="<?php echo esc_url($total_cta_button2_link); ?>"><?php echo ($total_cta_button2_text); ?></a>
     		<?php } ?>
     
     		</div>

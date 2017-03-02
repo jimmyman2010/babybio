@@ -29,7 +29,7 @@ if(get_theme_mod('total_about_page_disable') != 'on' ){ ?>
     			</div>
     			<?php
     			endwhile;
-    			endif;	
+    			endif;
     			wp_reset_postdata();
             }
 			?>

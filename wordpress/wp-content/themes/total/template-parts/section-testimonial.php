@@ -14,11 +14,11 @@ if(get_theme_mod('total_testimonial_section_disable') != 'on' ){ ?>
 		<?php if($total_testimonial_title || $total_testimonial_sub_title){ ?>
 		<div class="ht-section-title-tagline">
 		<?php if($total_testimonial_title){ ?>
-		<h2 class="ht-section-title"><?php echo esc_html($total_testimonial_title); ?></h2>
+		<h2 class="ht-section-title"><?php echo ($total_testimonial_title); ?></h2>
 		<?php } ?>
 
 		<?php if($total_testimonial_sub_title){ ?>
-		<div class="ht-section-tagline"><?php echo esc_html($total_testimonial_sub_title); ?></div>
+		<div class="ht-section-tagline"><?php echo ($total_testimonial_sub_title); ?></div>
 		<?php } ?>
 		</div>
 		<?php } ?>

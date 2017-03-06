@@ -23,7 +23,17 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 			</div>
 		<?php } ?>
 
-		<div class="ht-team-member-wrap ht-clearfix">
+		<?php
+		$total = 0;
+		for( $i = 1; $i < 5; $i++ ) {
+			$total_team_page_id = get_theme_mod('total_team_page' . $i);
+			if($total_team_page_id){
+				$total++;
+			}
+		}
+		?>
+
+		<div class="ht-team-member-wrap ht-team-member-wrap--<?= $total ?> ht-clearfix">
 			<?php 
 			for( $i = 1; $i < 5; $i++ ){
 				$total_team_page_id = get_theme_mod('total_team_page'.$i); 

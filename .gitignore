@@ -7,5 +7,6 @@ bower
 bower_components
 app/css
 *.zip
-wordpress/wp-content/themes/ability/assets/*.html
+wordpress/wp-content/themes/total/assets/*.html
 wordpress/wp-content/uploads/cache
+wordpress/wp-content/uploads/2017/03/

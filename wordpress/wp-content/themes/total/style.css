@@ -1477,92 +1477,6 @@ object {
 }
 
 /*--------------------------------------------------------------
-## Home Slider
---------------------------------------------------------------*/
-.ht-slide{
-	position: relative;
-}
-
-.ht-slide img{
-	width: 100%;
-}
-
-.ht-slide-overlay{
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	background: rgba(0,0,0,0.2);
-}
-
-.ht-slide-caption{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 1170px;
-	margin-left: -585px;
-	-ms-transform: translateY(-50%); 
-   	-webkit-transform: translateY(-50%); 
-    transform: translateY(-50%);
-}
-
-.ht-slide-cap-title{
-	text-align: center;
-	font-size: 38px;
-	color: #FFF;
-	font-weight: 400;
-	margin-bottom: 25px;
-	padding: 0 10%;
-	line-height: 1.2;
-	font-family: 'Oswald', sans-serif;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	-webkit-animation-duration: 0.5s;
-	animation-duration: 0.5s;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.2)
-}
-
-.ht-slide-cap-title span{
-	display: inline-block;
-	padding: 8px 15px;
-	background: #FFC107;
-}
-
-.ht-slide-cap-desc{
-	text-align: center;
-	font-size: 25px;
-	line-height: 1.4;
-	color: #FFF;
-	padding: 0 20%;
-	-webkit-animation-duration: 0.5s;
-	animation-duration: 0.5s;
-	-webkit-animation-delay: 1s;
-	animation-delay: 1s;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.2)
-}
-
-#ht-home-slider-section .bx-wrapper .bx-controls-direction a{
-	height: 70px;
-    width: 50px;
-	margin-top: -35px;
-	opacity: 0.6;
-}
-
-#ht-home-slider-section .bx-wrapper .bx-controls-direction a:hover{
-	opacity: 1;
-}
-
-#ht-home-slider-section .bx-wrapper .bx-prev{
-	background: url(images/prev.png) no-repeat center rgba(0,0,0,0.3);
-	left: 0;
-}
-
-#ht-home-slider-section .bx-wrapper .bx-next{
-	background: url(images/next.png) no-repeat center rgba(0,0,0,0.3);
-	right: 0;
-}
-/*--------------------------------------------------------------
 ## About Section
 --------------------------------------------------------------*/
 #ht-about-us-section{
@@ -1935,157 +1849,6 @@ object {
 	cursor: pointer;
 }
 
-/*--------------------------------------------------------------
-## Team Section
---------------------------------------------------------------*/
-.ht-team-member-wrap{
-	margin-left: -2%;
-}
-
-.ht-team-member{
-	width: 23%;
-	margin-left: 2%;
-	float: left;
-	text-align: center;
-}
-
-.ht-team-member img{
-	width: 100%;
-}
-
-.ht-team-member-image{
-	position: relative;
-	overflow: hidden;
-}
-
-.ht-team-social-id{
-	padding: 10px;
-
-}
-
-.ht-team-social-id a{
-	display: inline-block;
-	color: #FFF;
-	margin: 0 5px;
-	font-size: 16px;
-	line-height: 32px;
-	background: #FFC107;
-	color: #FFF;
-	height: 32px;
-	width: 32px;
-	border-radius: 50%;
-}
-
-.ht-team-social-id a:hover{
-	background: #333;
-	color: #FFF;
-}
-
-.ht-team-member-excerpt{
-	background: rgba(255, 193, 7, 0.9);
-	padding: 20px;
-	color: #FFF !important;
-	display: block;
-	position: absolute;
-	left: 10px;
-	right: 10px;
-	bottom: 10px;
-	top: 10px;
-    opacity: 0;
-	-ms-transform: scale(0.5); 
-   	-webkit-transform: scale(0.5); 
-    transform: scale(0.5);
-    transition:all 0.3s ease;
-	-moz-transition:all 0.3s ease;
-	-webkit-transition:all 0.3s ease;
-}
-
-.ht-team-member:hover .ht-team-member-excerpt{
-    opacity: 1;
-	-ms-transform: scale(1); 
-   	-webkit-transform: scale(1); 
-    transform: scale(1);
-}
-
-.ht-team-member-excerpt-wrap{
-	display: table;
-	width: 100%;
-	height: 100%;
-}
-
-.ht-team-member-excerpt-wrap .ht-team-member-span{
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.ht-title-wrap{
-	background: rgba(255, 193, 7, 0.9);
-	color: #FFF;
-	padding: 10px;
-	position: absolute;
-	left: 10px;
-	bottom: 10px;
-	right: 10px;
-    -moz-transition:all 0.3s ease;
-	-webkit-transition:all 0.3s ease;
-    -webkit-transition:all 0.3s ease;
-    opacity: 1;
-}
-
-.ht-team-member:hover .ht-title-wrap{
-    opacity: 0;
-}
-
-.ht-team-member h6{
-	text-transform: uppercase;
-	font-weight: 400;
-	position: relative;
-	padding-bottom: 10px;
-}
-
-.ht-team-member .ht-title-wrap h6{
-    padding: 0;
-    margin: 0;
-}
-
-.ht-team-member h6 a{
-	text-decoration: none;
-	color: inherit;
-}
-
-.ht-team-member .ht-team-member-excerpt h6:after{
-	content: "";
-	position: absolute;
-	width: 50px;
-	left: 50%;
-	margin-left: -25px;
-	height: 2px;
-	background: #FFF;
-	bottom: -2px;
-}
-
-.ht-team-member .ht-team-designation{
-	font-size: 0.9em;
-    margin-bottom: 15px;
-}
-
-.ht-team-detail{
-	background: #FFF;
-	display: inline-block;
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-	color: #FFC107;
-	padding: 0 10px;
-	text-decoration: none;
-	line-height: 30px;
-	font-size: 0.9em;
-}
-
-.ht-team-detail:hover{
-    background: #333;
-    color: #FFF;    
-}
 
 /*--------------------------------------------------------------
 ## Counter Section
@@ -3088,11 +2851,6 @@ object {
 		width: auto;
 		padding: 0 15px;
 	}
-
-	.ht-slide-caption{
-		width: 80%;
-		margin-left: -40%;
-	}
 }
 
 @media screen and (max-width: 1000px){
@@ -3181,11 +2939,6 @@ object {
 
 	#ht-team-section{
 		padding-bottom: 30px;
-	}
-
-	.ht-team-member{
-		width: 48%;
-		margin-bottom: 30px;
 	}
 }
 
@@ -3292,17 +3045,6 @@ object {
 		margin-bottom: 0;
 	}
 
-	.ht-slide-cap-title{
-		font-size: 24px;
-		font-size: 4vw;
-		margin-bottom: 10px;
-	}
-
-	.ht-slide-cap-desc{
-		font-size: 14px;
-		font-size: 3vw;
-	}
-
 	#primary{
 		width: auto !important;
 		float: none !important;
@@ -3320,16 +3062,6 @@ object {
 	#ht-home-slider-section .bx-wrapper .bx-controls-direction a,
 	.ht-testimonial-wrap .bx-wrapper .bx-controls-direction a{
 		display: none;
-	}
-
-	.ht-team-member-wrap{
-		margin-left: 0;
-	}
-
-	.ht-team-member{
-		width: 75%;
-		float: none;
-		margin: 0 auto 30px;
 	}
 
 	.ht-team-counter-wrap{
@@ -3354,11 +3086,6 @@ object {
 		width: auto;
 	}
 
-	.ht-team-member-wrap{
-		margin-left: 0;
-	}
-
-	.ht-team-member,
 	.ht-counter{
 		width: auto;
 		float: none;

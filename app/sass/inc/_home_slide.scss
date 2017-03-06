@@ -1,0 +1,103 @@
+/*--------------------------------------------------------------
+## Home Slider
+--------------------------------------------------------------*/
+.ht-slide{
+    position: relative;
+}
+
+.ht-slide img{
+    width: 100%;
+}
+
+.ht-slide-overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.2);
+}
+
+.ht-slide-caption{
+    padding-bottom: 20px;
+    @include tablet{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        width: 80%;
+        margin-left: -40%;
+    }
+    @include desktop{
+        width: 1170px;
+        margin-left: -585px;
+    }
+}
+
+.ht-slide-cap-title{
+    text-align: center;
+    font-size: 24px;
+    color: #FFF;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    @include tablet{
+        font-size: 38px;
+        margin-bottom: 25px;
+        padding: 0 10%;
+    }
+    span{
+        display: block;
+        padding: 8px 15px;
+        background: #FFC107;
+        @include tablet{
+            display: inline-block;
+        }
+    }
+}
+
+.ht-slide-cap-desc{
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #FFF;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    padding: 0 10px;
+    @include tablet{
+        font-size: 25px;
+        padding: 0 20%;
+    }
+}
+
+#ht-home-slider-section .bx-wrapper {
+    .bx-controls-direction a{
+        height: 70px;
+        width: 50px;
+        margin-top: -35px;
+        opacity: 0.6;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    .bx-prev {
+        background: url(images/prev.png) no-repeat center rgba(0, 0, 0, 0.3);
+        left: 0;
+    }
+    .bx-next{
+        background: url(images/next.png) no-repeat center rgba(0,0,0,0.3);
+        right: 0;
+    }
+}

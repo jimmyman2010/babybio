@@ -16,7 +16,7 @@ function get_the_content_with_formatting ($more_link_text = '(more...)', $stript
 function button_func( $atts, $content = "Click here" ) {
     $atts = shortcode_atts( array(
         'color' => 'green',
-        'link' => '#'
+        'link' => 'javascript:void(0);'
     ), $atts, 'button' );
     $html = '<a class="button button--' . $atts['color'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
 

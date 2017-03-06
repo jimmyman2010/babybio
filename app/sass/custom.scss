@@ -1,0 +1,53 @@
+@import "compass/css3";
+
+@import "compass/utilities/sprites";
+
+@import "variables";
+@import "mixin";
+
+.button{
+    display: inline-block;
+    background-color: $color-green;
+    color: white;
+    padding: 5px 30px;
+    text-align: center;
+    border: 1px solid $color-green;
+    @include border-radius(1px);
+    text-decoration: none !important;
+}
+.button--green{
+    &:hover{
+        background-color: rgba($color-green, 0.5);
+    }
+}
+.button--white{
+    color: $color-grey !important;
+    background-color: white;
+    border-color: $color-grey;
+    &:hover{
+        background-color: rgba(white, 0.5);
+    }
+}
+
+.button--pink{
+    background-color: $color-pink;
+    border-color: $color-pink;
+    &:hover{
+        background-color: rgba($color-pink, 0.5);
+    }
+
+}
+
+#ht-featured-post-section,
+.ht-slide {
+    a {
+        color: inherit;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@import "inc/home_slide";
+
+@import "inc/team_member";

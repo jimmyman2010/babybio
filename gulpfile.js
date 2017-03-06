@@ -18,7 +18,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 gulp.task('build', ['html-include', 'compass'], function(){
-    gulp.start(['fonts', 'html']);
+    gulp.start(['fonts', 'extras', 'html']);
 });
 
 gulp.task('default', ['clean'], function(){
@@ -69,6 +69,11 @@ gulp.task('html-include', function() {
     return gulp.src('app/*.html')
         .pipe(include())
         .pipe(gulp.dest('.tmp/'));
+});
+
+gulp.task('extras', function() {
+    return gulp.src('app/images/**/*.*')
+        .pipe(gulp.dest('wordpress/wp-content/themes/total/assets/images/'));
 });
 
 // watch Sass files for changes, run the Sass preprocessor with the 'sass' task and reload

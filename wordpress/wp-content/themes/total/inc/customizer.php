@@ -5,7 +5,7 @@
  * @package Total
  */
 
-const LANG_2 = ' 2';
+const LANG_2 = ' (Vietnamese)';
 
 /**
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
@@ -500,6 +500,24 @@ function total_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
+		'total_featured_title_2',
+		array(
+			'sanitize_callback' => 'total_sanitize_text',
+			'default'			=> __( 'Featured Section', 'total' )
+		)
+	);
+
+	$wp_customize->add_control(
+		'total_featured_title_2',
+		array(
+			'settings'		=> 'total_featured_title_2',
+			'section'		=> 'total_featured_section',
+			'type'			=> 'text',
+			'label'			=> __( 'Title' . LANG_2, 'total' )
+		)
+	);
+
+	$wp_customize->add_setting(
 		'total_featured_sub_title',
 		array(
 			'sanitize_callback' => 'total_sanitize_text',
@@ -514,6 +532,24 @@ function total_customize_register( $wp_customize ) {
 			'section'		=> 'total_featured_section',
 			'type'			=> 'textarea',
 			'label'			=> __( 'Sub Title', 'total' ),
+		)
+	);
+
+	$wp_customize->add_setting(
+		'total_featured_sub_title_2',
+		array(
+			'sanitize_callback' => 'total_sanitize_text',
+			'default'			=> __( 'Featured Section SubTitle', 'total' )
+		)
+	);
+
+	$wp_customize->add_control(
+		'total_featured_sub_title_2',
+		array(
+			'settings'		=> 'total_featured_sub_title_2',
+			'section'		=> 'total_featured_section',
+			'type'			=> 'textarea',
+			'label'			=> __( 'Sub Title' . LANG_2, 'total' ),
 		)
 	);
 

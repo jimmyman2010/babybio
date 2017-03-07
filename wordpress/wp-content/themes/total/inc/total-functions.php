@@ -75,7 +75,7 @@ function total_dynamic_styles(){
 	echo "</style>";
 }
 
-add_action( 'wp_head', 'total_dynamic_styles' );
+//add_action( 'wp_head', 'total_dynamic_styles' );
 
 if( !function_exists( 'total_excerpt' ) ){
 	function total_excerpt( $content , $letter_count ){

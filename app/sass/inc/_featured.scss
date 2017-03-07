@@ -5,21 +5,32 @@
     background: #FFC107;
     color: #FFF;
     padding-bottom: 80px;
+
+    .ht-section-title-tagline{
+        margin-bottom: 0;
+    }
 }
 
 .ht-featured-post-wrap{
-    padding-top: 30px;
     text-align: center;
 }
 
 .ht-featured-post{
     position: relative;
     display: inline-block;
-    width: 30%;
-    margin: 2%;
     text-align: center;
     border:2px solid #FFF;
     padding: 0 30px;
+    margin-top: 130px;
+    @include tablet{
+        margin-right: 2%;
+        margin-bottom: 2%;
+        margin-left: 2%;
+        width: 45%;
+    }
+    @include desktop{
+        width: 30%;
+    }
     h5{
         text-transform: uppercase;
         margin-bottom: 25px;

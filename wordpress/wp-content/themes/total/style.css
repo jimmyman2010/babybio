@@ -2901,20 +2901,6 @@ object {
 		text-align: center;
 	}
 
-	.ht-featured-post-wrap{
-		margin-left: 0;
-	}
-
-	.ht-featured-post{
-		float: none;
-		margin: 0 auto 80px;
-		width: 75%;
-	}
-
-	.ht-featured-post:last-child{
-		margin-bottom: 0;
-	}
-
 	.ht-portfolio-cat-name-list{
 		text-align: center;
 	}
@@ -3016,8 +3002,7 @@ object {
 }
 
 @media screen and (max-width: 480px){
-	.ht-blog-post,
-	.ht-featured-post{
+	.ht-blog-post{
 		width: auto;
 	}
 

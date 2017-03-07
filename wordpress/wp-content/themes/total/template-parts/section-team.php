@@ -10,11 +10,11 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 		<?php
 		$total_team_title = get_theme_mod('total_team_title');
 		if(ICL_LANGUAGE_CODE !== 'en'){
-			$total_featured_title = get_theme_mod('total_team_title_2');
+			$total_team_title = get_theme_mod('total_team_title_2');
 		}
 		$total_team_sub_title = get_theme_mod('total_team_sub_title');
 		if(ICL_LANGUAGE_CODE !== 'en'){
-			$total_featured_title = get_theme_mod('total_team_sub_title_2');
+			$total_team_sub_title = get_theme_mod('total_team_sub_title_2');
 		}
 		?>
 		<?php if( $total_team_title || $total_team_sub_title ){ ?>

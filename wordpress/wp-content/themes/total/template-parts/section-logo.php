@@ -9,7 +9,13 @@ if(get_theme_mod('total_client_logo_section_disable') != 'on' ){ ?>
 	<div class="ht-container">
 		<?php
 		$total_logo_title = get_theme_mod('total_logo_title');
+		if(ICL_LANGUAGE_CODE !== 'en'){
+			$total_logo_title = get_theme_mod('total_logo_title_2');
+		}
 		$total_logo_sub_title = get_theme_mod('total_logo_sub_title');
+		if(ICL_LANGUAGE_CODE !== 'en'){
+			$total_logo_sub_title = get_theme_mod('total_logo_sub_title_2');
+		}
 		?>
 		<?php if($total_logo_title || $total_logo_sub_title){ ?>
 		<div class="ht-section-title-tagline">

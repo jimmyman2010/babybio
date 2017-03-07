@@ -10,11 +10,11 @@ if(get_theme_mod('total_portfolio_section_disable') != 'on' ){ ?>
 	<?php
 	$total_portfolio_title = get_theme_mod('total_portfolio_title');
 	if(ICL_LANGUAGE_CODE !== 'en'){
-		$total_featured_title = get_theme_mod('total_portfolio_title_2');
+		$total_portfolio_title = get_theme_mod('total_portfolio_title_2');
 	}
 	$total_portfolio_sub_title = get_theme_mod('total_portfolio_sub_title');
 	if(ICL_LANGUAGE_CODE !== 'en'){
-		$total_featured_title = get_theme_mod('total_portfolio_sub_title_2');
+		$total_portfolio_sub_title = get_theme_mod('total_portfolio_sub_title_2');
 	}
 	?>
 

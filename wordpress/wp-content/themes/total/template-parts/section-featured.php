@@ -7,17 +7,25 @@
 if(get_theme_mod('total_featured_section_disable') != 'on' ){ ?>
 <section id="ht-featured-post-section" class="ht-section">
 	<div class="ht-container">
-		<?php
-		$total_featured_title = get_theme_mod('total_featured_title');
-		$total_featured_sub_title = get_theme_mod('total_featured_sub_title');
-		?>
+	<?php
+	$total_featured_title = get_theme_mod('total_featured_title');
+	if(ICL_LANGUAGE_CODE !== 'en'){
+		$total_featured_title = get_theme_mod('total_featured_title_2');
+	}
+	$total_featured_sub_title = get_theme_mod('total_featured_sub_title');
+	if(ICL_LANGUAGE_CODE !== 'en'){
+		$total_featured_sub_title = get_theme_mod('total_featured_sub_title_2');
+	}
+	?>
 		<?php 
 		if($total_featured_title || $total_featured_sub_title){
 			?>
 			<div class="ht-section-title-tagline">
 			<?php
 			if($total_featured_title){ ?>
-			<h2 class="ht-section-title"><?php echo ($total_featured_title); ?></h2>
+			<h2 class="ht-section-title">
+				<?php echo ($total_featured_title); ?>
+			</h2>
 			<?php } ?>
 
 			<?php if($total_featured_sub_title){ ?>
@@ -41,15 +49,21 @@ if(get_theme_mod('total_featured_section_disable') != 'on' ){ ?>
 					while($query->have_posts()) : $query->the_post();
 				?>
 					<div class="ht-featured-post">
-						<div class="ht-featured-icon"><i class="<?php echo esc_attr($total_featured_page_icon); ?>"></i></div>
-						<h5><?php the_title(); ?></h5>
-						<div class="ht-featured-excerpt">
-						<?php 
-						if(has_excerpt()){
-							echo get_the_excerpt();
-						}else{
-							echo total_excerpt( get_the_content(), 130); 
-						}?>
+						<?php if(has_post_thumbnail()){ ?>
+							<div class="ht-featured-icon ht-featured-icon--thumbnail"><?php echo get_the_post_thumbnail(null, 'featured-thumb'); ?></div>
+						<?php } else { ?>
+							<div class="ht-featured-icon"><i class="<?php echo esc_attr($total_featured_page_icon); ?>"></i></div>
+						<?php } ?>
+						<div class="watch">
+							<h5><?php the_title(); ?></h5>
+							<div class="ht-featured-excerpt">
+							<?php
+							if(has_excerpt()){
+								echo get_the_excerpt();
+							}else{
+								echo total_excerpt( get_the_content(), 130);
+							}?>
+							</div>
 						</div>
 						<div class="ht-featured-link">
 							<a href="<?php echo esc_url(get_permalink()); ?>"><?php _e( 'Read More', 'total' ); ?></a>

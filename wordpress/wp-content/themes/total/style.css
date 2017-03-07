@@ -1545,74 +1545,9 @@ object {
 }
 
 /*--------------------------------------------------------------
-## Featured Section
---------------------------------------------------------------*/
-#ht-featured-post-section{
-	background: #FFC107;
-	color: #FFF;
-	padding-bottom: 80px;
-}
-
-.ht-featured-post-wrap{
-	margin-left: -3%;
-}
-
-.ht-featured-post{
-	float: left;
-	margin-left: 3%;
-	width: 30.33%;
-	text-align: center;
-	border:2px solid #FFF;
-	padding: 30px;
-}
-
-.ht-featured-post h5{
-	text-transform: uppercase;
-	margin-bottom: 25px;
-}
-
-.ht-featured-icon{
-    display: inline-block;
-    color: #FFF;
-    font-size: 46px;
-    line-height: 80px;
-    width: 180px;
-    background: #FFC107;
-    -ms-transform: translateY(-35px); 
-    -webkit-transform: translateY(-35px); 
-    transform: translateY(-35px); 
-}
-
-.ht-featured-icon .fa{
-	vertical-align: bottom;
-}
-
-.ht-featured-link{
-	-ms-transform: translateY(52px);
-	-webkit-transform: translateY(52px);
-	transform: translateY(52px); 
-}
-
-.ht-featured-link a{
-	padding: 0 15px;
-	display: inline-block;
-	line-height: 40px;
-    background: #FFF;
-	color: #FFC107;
-    border-right: 10px solid #FFC107;
-    border-left: 10px solid #FFC107;
-}
-
-.ht-featured-link a:hover{
-	background: #333;
-	color: #FFF;
-}
-
-/*--------------------------------------------------------------
 ## Portfolio Section
 --------------------------------------------------------------*/
 .ht-portfolio-cat-name-list{
-	text-align: center;
 	margin-bottom: 30px;
 	text-align: right;
 }

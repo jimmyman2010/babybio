@@ -23,3 +23,9 @@ function button_func( $atts, $content = "Click here" ) {
     return $html;
 }
 add_shortcode( 'button', 'button_func' );
+
+
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+    add_image_size( 'featured-thumb', 160, 160, true );
+}

@@ -6,12 +6,24 @@
 
 if(get_theme_mod('total_service_section_disable') != 'on' ){ ?>
 <section id="ht-service-post-section" class="ht-section">
-	<div class="ht-service-left-bg"></div>
+	<?php $total_service_left_bg = get_theme_mod('total_service_left_bg');
+	if(ICL_LANGUAGE_CODE !== 'en'){
+		$total_featured_title = get_theme_mod('total_service_left_bg_2');
+	} ?>
+
+	<div class="ht-service-left-bg" style="background-image: url('<?= $total_service_left_bg ?>')"></div>
+
 	<div class="ht-container">
 		<div class="ht-service-posts ht-clearfix">
 			<?php
 			$total_service_title = get_theme_mod('total_service_title');
+			if(ICL_LANGUAGE_CODE !== 'en'){
+				$total_featured_title = get_theme_mod('total_service_title_2');
+			}
 			$total_service_sub_title = get_theme_mod('total_service_sub_title');
+			if(ICL_LANGUAGE_CODE !== 'en'){
+				$total_featured_title = get_theme_mod('total_service_sub_title_2');
+			}
 			?>
 			<?php 
 			if($total_service_title || $total_service_sub_title){

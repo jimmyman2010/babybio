@@ -326,7 +326,7 @@ function total_customize_register( $wp_customize ) {
 				'settings'		=> 'total_about_progressbar_title_2'.$i,
 				'section'		=> 'total_about_section',
 				'type'			=> 'text',
-				'label'			=> __( 'Title' . LANG_2, 'total' )
+				'label'			=> __( 'Title', 'total' ) . LANG_2
 			)
 		);
 
@@ -403,7 +403,7 @@ function total_customize_register( $wp_customize ) {
 				array(
 					'section' => 'total_about_section',
 					'settings' => 'total_about_image_2',
-					'description' => __('Recommended Image Size: 500X600px', 'total')
+					'description' => __('Recommended Image Size: 500X600px', 'total') . LANG_2
 				)
 			)
 		);
@@ -513,7 +513,7 @@ function total_customize_register( $wp_customize ) {
 			'settings'		=> 'total_featured_title_2',
 			'section'		=> 'total_featured_section',
 			'type'			=> 'text',
-			'label'			=> __( 'Title' . LANG_2, 'total' )
+			'label'			=> __( 'Title', 'total' ) . LANG_2
 		)
 	);
 
@@ -549,7 +549,7 @@ function total_customize_register( $wp_customize ) {
 			'settings'		=> 'total_featured_sub_title_2',
 			'section'		=> 'total_featured_section',
 			'type'			=> 'textarea',
-			'label'			=> __( 'Sub Title' . LANG_2, 'total' ),
+			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
 		)
 	);
 
@@ -591,7 +591,7 @@ function total_customize_register( $wp_customize ) {
 			)
 		);
 
-		$wp_customize->add_setting(
+		/*$wp_customize->add_setting(
 			'total_featured_page_icon'.$i,
 			array(
 				'default'			=> 'fa fa-bell',
@@ -610,7 +610,7 @@ function total_customize_register( $wp_customize ) {
 					'label'			=> __( 'FontAwesome Icon', 'total' ),
 				)
 			)
-		);
+		);*/
 	}
 
 	/*============PORTFOLIO SECTION PANEL============*/
@@ -685,6 +685,24 @@ function total_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
+		'total_portfolio_title_2',
+		array(
+			'sanitize_callback' => 'total_sanitize_text',
+			'default'			=> __( 'Portfolio Section', 'total' )
+		)
+	);
+
+	$wp_customize->add_control(
+		'total_portfolio_title_2',
+		array(
+			'settings'		=> 'total_portfolio_title_2',
+			'section'		=> 'total_portfolio_section',
+			'type'			=> 'text',
+			'label'			=> __( 'Title', 'total' ) . LANG_2
+		)
+	);
+
+	$wp_customize->add_setting(
 		'total_portfolio_sub_title',
 		array(
 			'sanitize_callback' => 'total_sanitize_text',
@@ -699,6 +717,24 @@ function total_customize_register( $wp_customize ) {
 			'section'		=> 'total_portfolio_section',
 			'type'			=> 'textarea',
 			'label'			=> __( 'Sub Title', 'total' )
+		)
+	);
+
+	$wp_customize->add_setting(
+		'total_portfolio_sub_title_2',
+		array(
+			'sanitize_callback' => 'total_sanitize_text',
+			'default'			=> __( 'Portfolio Section SubTitle', 'total' )
+		)
+	);
+
+	$wp_customize->add_control(
+		'total_portfolio_sub_title_2',
+		array(
+			'settings'		=> 'total_portfolio_sub_title_2',
+			'section'		=> 'total_portfolio_section',
+			'type'			=> 'textarea',
+			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
 		)
 	);
 
@@ -814,6 +850,24 @@ function total_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
+		'total_service_title_2',
+		array(
+			'sanitize_callback' => 'total_sanitize_text',
+			'default'			=> __( 'Service Section', 'total' )
+		)
+	);
+
+	$wp_customize->add_control(
+		'total_service_title_2',
+		array(
+			'settings'		=> 'total_service_title_2',
+			'section'		=> 'total_service_section',
+			'type'			=> 'text',
+			'label'			=> __( 'Title', 'total' ) . LANG_2
+		)
+	);
+
+	$wp_customize->add_setting(
 		'total_service_sub_title',
 		array(
 			'sanitize_callback' => 'total_sanitize_text',
@@ -828,6 +882,24 @@ function total_customize_register( $wp_customize ) {
 			'section'		=> 'total_service_section',
 			'type'			=> 'textarea',
 			'label'			=> __( 'Sub Title', 'total' )
+		)
+	);
+
+	$wp_customize->add_setting(
+		'total_service_sub_title_2',
+		array(
+			'sanitize_callback' => 'total_sanitize_text',
+			'default'			=> __( 'Service Section', 'total' )
+		)
+	);
+
+	$wp_customize->add_control(
+		'total_service_sub_title_2',
+		array(
+			'settings'		=> 'total_service_sub_title_2',
+			'section'		=> 'total_service_section',
+			'type'			=> 'textarea',
+			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
 		)
 	);
 
@@ -931,6 +1003,26 @@ function total_customize_register( $wp_customize ) {
 	    )
 	);
 
+	$wp_customize->add_setting(
+		'total_service_left_bg_2',
+		array(
+			'sanitize_callback' => 'esc_url_raw',
+			'default'			=> get_template_directory_uri().'/images/banner.jpg'
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'total_service_left_bg_2',
+			array(
+				'section' => 'total_service_section',
+				'settings' => 'total_service_left_bg_2',
+				'description' => __('Recommended Image Size: 770X650px', 'total') . LANG_2
+			)
+		)
+	);
+
 	/*============TEAM SECTION PANEL============*/
 	$wp_customize->add_section(
 		'total_team_section',
@@ -1003,6 +1095,24 @@ function total_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
+		'total_team_title_2',
+		array(
+			'sanitize_callback' => 'total_sanitize_text',
+			'default'			=> __( 'Team Section', 'total' )
+		)
+	);
+
+	$wp_customize->add_control(
+		'total_team_title_2',
+		array(
+			'settings'		=> 'total_team_title_2',
+			'section'		=> 'total_team_section',
+			'type'			=> 'text',
+			'label'			=> __( 'Title', 'total' ) . LANG_2
+		)
+	);
+
+	$wp_customize->add_setting(
 		'total_team_sub_title',
 		array(
 			'sanitize_callback' => 'total_sanitize_text',
@@ -1017,6 +1127,24 @@ function total_customize_register( $wp_customize ) {
 			'section'		=> 'total_team_section',
 			'type'			=> 'textarea',
 			'label'			=> __( 'Sub Title', 'total' )
+		)
+	);
+
+	$wp_customize->add_setting(
+		'total_team_sub_title_2',
+		array(
+			'sanitize_callback' => 'total_sanitize_text',
+			'default'			=> __( 'Team Section SubTitle', 'total' )
+		)
+	);
+
+	$wp_customize->add_control(
+		'total_team_sub_title_2',
+		array(
+			'settings'		=> 'total_team_sub_title_2',
+			'section'		=> 'total_team_section',
+			'type'			=> 'textarea',
+			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
 		)
 	);
 
@@ -1058,7 +1186,7 @@ function total_customize_register( $wp_customize ) {
 			)
 		);
 
-		$wp_customize->add_setting(
+		/*$wp_customize->add_setting(
 			'total_team_designation'.$i,
 			array(
 				'sanitize_callback' => 'total_sanitize_text'
@@ -1073,7 +1201,7 @@ function total_customize_register( $wp_customize ) {
 				'type'			=> 'text',
 				'label'			=> __( 'Team Member Designation', 'total' )
 			)
-		);
+		);*/
 
 		$wp_customize->add_setting(
 			'total_team_facebook'.$i,
@@ -1141,9 +1269,27 @@ function total_customize_register( $wp_customize ) {
 			'total_team_linkedin'.$i,
 			array(
 				'settings'		=> 'total_team_linkedin'.$i,
-				'section'		=> 'total_team_linkedin'.$i,
+				'section'		=> 'total_team_section',
 				'type'			=> 'url',
 				'label'	        => __( 'Linkedin Url', 'total' )
+			)
+		);
+
+		$wp_customize->add_setting(
+			'total_team_instagram'.$i,
+			array(
+				'default'			=> 'https://instagram.com',
+				'sanitize_callback' => 'esc_url_raw'
+			)
+		);
+
+		$wp_customize->add_control(
+			'total_team_instagram'.$i,
+			array(
+				'settings'		=> 'total_team_instagram'.$i,
+				'section'		=> 'total_team_section',
+				'type'			=> 'url',
+				'label'	        => __( 'Instagram Url', 'total' )
 			)
 		);
 	}

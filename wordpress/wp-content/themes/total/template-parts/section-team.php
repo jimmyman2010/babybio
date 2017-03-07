@@ -9,7 +9,13 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 	<div class="ht-container">
 		<?php
 		$total_team_title = get_theme_mod('total_team_title');
+		if(ICL_LANGUAGE_CODE !== 'en'){
+			$total_featured_title = get_theme_mod('total_team_title_2');
+		}
 		$total_team_sub_title = get_theme_mod('total_team_sub_title');
+		if(ICL_LANGUAGE_CODE !== 'en'){
+			$total_featured_title = get_theme_mod('total_team_sub_title_2');
+		}
 		?>
 		<?php if( $total_team_title || $total_team_sub_title ){ ?>
 			<div class="ht-section-title-tagline">
@@ -49,6 +55,8 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 						$total_team_facebook = get_theme_mod('total_team_facebook'.$i);
 						$total_team_twitter = get_theme_mod('total_team_twitter'.$i);
 						$total_team_google_plus = get_theme_mod('total_team_google_plus'.$i);
+						$total_team_linkedin = get_theme_mod('total_team_linkedin'.$i);
+						$total_team_instagram = get_theme_mod('total_team_instagram'.$i);
 					?>
 						<div class="ht-team-member">
 							
@@ -70,8 +78,8 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
                                         <h6><?php the_title(); ?></h6>
 								
         								<?php if($total_team_designation){ ?>
-        									<div class="ht-team-designation"><?php echo ($total_team_designation); ?></div>
-        								<?php }
+											<div class="ht-team-designation"><?php echo ($total_team_designation); ?></div>
+										<?php }
                                     
 										if(has_excerpt()){
 											echo get_the_excerpt();
@@ -88,15 +96,23 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 							<?php if( $total_team_facebook || $total_team_twitter || $total_team_google_plus ){ ?>
 								<div class="ht-team-social-id">
 									<?php if($total_team_facebook){ ?>
-									<a target="_blank" href="<?php echo esc_url($total_team_facebook) ?>"><i class="fa fa-facebook"></i></a>
+										<a target="_blank" href="<?php echo esc_url($total_team_facebook) ?>"><i class="fa fa-facebook"></i></a>
 									<?php } ?>
 
 									<?php if($total_team_twitter){ ?>
-									<a target="_blank" href="<?php echo esc_url($total_team_twitter) ?>"><i class="fa fa-twitter"></i></a>
+										<a target="_blank" href="<?php echo esc_url($total_team_twitter) ?>"><i class="fa fa-twitter"></i></a>
 									<?php } ?>
 
 									<?php if($total_team_google_plus){ ?>
-									<a target="_blank" href="<?php echo esc_url($total_team_google_plus) ?>"><i class="fa fa-google-plus"></i></a>
+										<a target="_blank" href="<?php echo esc_url($total_team_google_plus) ?>"><i class="fa fa-google-plus"></i></a>
+									<?php } ?>
+
+									<?php if($total_team_linkedin){ ?>
+										<a target="_blank" href="<?php echo esc_url($total_team_linkedin) ?>"><i class="fa fa-linkedin"></i></a>
+									<?php } ?>
+
+									<?php if($total_team_instagram){ ?>
+										<a target="_blank" href="<?php echo esc_url($total_team_instagram) ?>"><i class="fa fa-instagram"></i></a>
 									<?php } ?>
 								</div>
 							<?php } ?>

@@ -85,19 +85,19 @@ if(get_theme_mod('total_portfolio_section_disable') != 'on' ){ ?>
 			?>
 				<div class="ht-portfolio <?php echo esc_attr($category_slug); ?>">
 					<div class="ht-portfolio-outer-wrap">
-					<div class="ht-portfolio-wrap" style="background-image: url(<?php echo esc_url($total_image[0]) ?>);">
-					
-					<img src="<?php echo esc_url($image_url); ?>" alt="<?php esc_attr(get_the_title()); ?>">
+						<div class="ht-portfolio-wrap" style="background-image: url(<?php echo esc_url($total_image[0]) ?>);">
 
-					<div class="ht-portfolio-caption">
-						<h5><?php the_title(); ?></h5>
-						<a class="ht-portfolio-link" href="<?php echo esc_url(get_permalink()); ?>"><i class="fa fa-link"></i></a>
-						
-						<?php if(has_post_thumbnail()){ ?>
-							<a class="ht-portfolio-image" data-lightbox-gallery="gallery1" href="<?php echo esc_url($total_image_large[0]) ?>"><i class="fa fa-search"></i></a>
-						<?php } ?>
-					</div>
-					</div>
+							<img src="<?php echo esc_url($image_url); ?>" alt="<?php esc_attr(get_the_title()); ?>">
+
+							<div class="ht-portfolio-caption">
+								<h5><?php the_title(); ?></h5>
+								<a class="ht-portfolio-link" href="<?php echo esc_url(get_permalink()); ?>"><i class="fa fa-link"></i></a>
+
+								<?php if(has_post_thumbnail()){ ?>
+									<a class="ht-portfolio-image" data-lightbox-gallery="gallery1" href="<?php echo esc_url($total_image_large[0]) ?>"><i class="fa fa-search"></i></a>
+								<?php } ?>
+							</div>
+						</div>
 					</div>
 				</div>
 			<?php

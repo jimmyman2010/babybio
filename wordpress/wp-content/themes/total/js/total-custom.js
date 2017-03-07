@@ -142,13 +142,13 @@ jQuery(function($){
   var elems = $container.isotope('getFilteredItemElements');
 
   elems.forEach(function(item, index){
-    if ( index == 0 || index == 4 ) {
-      $( item ).addClass('wide');
-      var bg = $(item).find('.ht-portfolio-image').attr('href');
-      $( item ).find('.ht-portfolio-wrap').css('background-image', 'url('+bg+')');
-    }else{
+    //if ( index == 0 || index == 4 ) {
+    //  $( item ).addClass('wide');
+    //  var bg = $(item).find('.ht-portfolio-image').attr('href');
+    //  $( item ).find('.ht-portfolio-wrap').css('background-image', 'url('+bg+')');
+    //}else{
       $( item ).removeClass('wide');
-    }
+    //}
   });
 
   GetMasonary();

@@ -1786,100 +1786,6 @@ object {
 
 
 /*--------------------------------------------------------------
-## Counter Section
---------------------------------------------------------------*/
-#ht-counter-section{
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-	color: #FFF;
-    background-attachment: fixed;
-    position: relative;
-    background-position: 50% 0;
-}
-
-#ht-counter-section .ht-section{
-    background: none;
-}
-
-#ht-counter-section .ht-counter-overlay{
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0,0,0,0.3);
-}
-
-#ht-counter-section .ht-container{
-	position: relative;
-}
-
-.ht-team-counter-wrap{
-	margin-left: -5%;
-}
-
-.ht-counter{
-	float: left;
-	width: 20%;
-	margin-left: 5%;
-	text-align: center;
-	border: 2px solid #FFC107;
-	border-top: 0;
-	padding: 0 20px 20px;
-	position: relative;
-}
-
-.ht-counter:after{
-	content: "";
-	position: absolute;
-	width: 30%;
-	left: 0;
-	top: 0;
-	height: 2px;
-	background: #FFC107;
-}
-
-.ht-counter:before{
-	content: "";
-	position: absolute;
-	width: 30%;
-	right: 0;
-	top: 0;
-	height: 2px;
-	background: #FFC107;
-}
-
-.ht-counter-count{
-	font-size: 48px;
-	line-height: 1;
-	margin-bottom: 25px;
-	letter-spacing: 3px;
-	font-family: 'Oswald', sans-serif;
-	font-weight: 400;
-}
-
-.ht-counter-icon{
-	display: inline-block;
-    font-size: 36px;
-    color: #FFC107;
-    position: relative;
-    -ms-transform: translate(0, -17px);
-    -webkit-transform: translate(0, -17px);
-    transform: translate(0, -17px);
-    line-height: 36px;
-}
-
-.ht-counter-title{
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	margin-top: 15px;
-	font-weight: 400;
-	margin: 0;
-}
-
-/*--------------------------------------------------------------
 ## Logo Section
 --------------------------------------------------------------*/
 .ht_client_logo_slider img{
@@ -2919,20 +2825,6 @@ object {
 		padding: 60px 0;
 	}
 
-	#ht-counter-section{
-		background-size: cover;
-		background-position: center !important;  
-	}
-
-	.ht-counter{
-		width: 45%;
-		margin-bottom: 60px;
-	}
-
-	#ht-counter-section{
-		padding-bottom: 0;
-	}
-
 	.ht-blog-wrap{
 		margin: 0;
 	}
@@ -2989,12 +2881,6 @@ object {
 		margin-left: 0;
 	}
 
-	.ht-counter{
-		width: 75%;
-		float: none;
-		margin: 0 auto 60px;
-	}
-
 	.ht-portfolio{
 		width: 50%;
 		padding: 4px;
@@ -3004,11 +2890,6 @@ object {
 @media screen and (max-width: 480px){
 	.ht-blog-post{
 		width: auto;
-	}
-
-	.ht-counter{
-		width: auto;
-		float: none;
 	}
 
 	.ht-testimonial-excerpt{

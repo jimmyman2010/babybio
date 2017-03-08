@@ -1,0 +1,91 @@
+/*--------------------------------------------------------------
+## Counter Section
+--------------------------------------------------------------*/
+#ht-counter-section{
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: #FFF;
+    background-attachment: fixed;
+    position: relative;
+    .ht-section{
+        background: none;
+    }
+    .ht-counter-overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.3);
+    }
+    .ht-container{
+        position: relative;
+    }
+    .ht-section-title-tagline{
+        margin-bottom: 0;
+    }
+}
+
+.ht-team-counter-wrap{
+    text-align: center;
+}
+
+.ht-counter{
+    margin: 50px 2% 0;
+    text-align: center;
+    border: 2px solid #FFC107;
+    border-top: 0;
+    padding: 0 20px 20px;
+    position: relative;
+    &:before{
+        content: "";
+        position: absolute;
+        width: 30%;
+        right: 0;
+        top: 0;
+        height: 2px;
+        background: #FFC107;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        width: 30%;
+        left: 0;
+        top: 0;
+        height: 2px;
+        background: #FFC107;
+    }
+    @include tablet{
+        display: inline-block;
+        width: 20%;
+    }
+}
+
+.ht-counter-count{
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+.ht-counter-icon{
+    display: inline-block;
+    font-size: 36px;
+    color: #FFC107;
+    position: relative;
+    -ms-transform: translate(0, -17px);
+    -webkit-transform: translate(0, -17px);
+    transform: translate(0, -17px);
+    line-height: 36px;
+}
+
+.ht-counter-title{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+}

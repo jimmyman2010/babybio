@@ -9,7 +9,7 @@ get_header(); ?>
 
 <?php
 if ( has_post_format( 'image' ) && has_post_thumbnail()) {
-	echo '<header class="ht-main-header bg-thumbnail" style="background-image: url(' . get_the_post_thumbnail_url(null) . ');">';
+	echo '<header class="ht-main-header bg-thumbnail" style="background-image: url(' . get_the_post_thumbnail_url(null, 'header-image') . ');">';
 } else {
 	echo '<header class="ht-main-header">';
 }

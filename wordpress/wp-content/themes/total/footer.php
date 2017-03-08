@@ -51,10 +51,9 @@
 		<div id="ht-bottom-footer">
 			<div class="ht-container">
 				<div class="ht-site-info">
-					<?php printf( esc_html__( 'WordPress Theme', 'total' ) ); ?>
-					<span class="sep"> | </span>
-					<?php printf( esc_html__( '%1$s by %2$s', 'total' ), '<a href="http://hashthemes.com/wordpress-theme/total/" target="_blank">Total</a>', 'Hash Themes' ); ?>
-				</div><!-- #site-info -->
+					&copy; 2017 Baby Bio by Saraya <span class="sep">|</span> Webdesign: <a href="http://www.martintutko.com" target="_blank">Martin Tutko</a>
+				</div>
+				<!-- #site-info -->
 			</div>
 		</div>
 	</footer><!-- #colophon -->

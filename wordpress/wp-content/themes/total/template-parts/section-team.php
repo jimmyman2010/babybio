@@ -58,7 +58,7 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 						$total_team_linkedin = get_theme_mod('total_team_linkedin'.$i);
 						$total_team_instagram = get_theme_mod('total_team_instagram'.$i);
 					?>
-							<?php if( $total_team_facebook || $total_team_twitter || $total_team_google_plus || $total_team_linkedin || $total_team_instagram ){ ?>
+
 							<div class="ht-team-member">
 
 								<div class="ht-team-member-image">
@@ -93,6 +93,8 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 										</div>
 									</div>
 								</div>
+
+							<?php if( $total_team_facebook || $total_team_twitter || $total_team_google_plus || $total_team_linkedin || $total_team_instagram ){ ?>
 								<div class="ht-team-social-id">
 									<?php if($total_team_facebook){ ?>
 										<a target="_blank" href="<?php echo esc_url($total_team_facebook) ?>"><i class="fa fa-facebook"></i></a>
@@ -114,9 +116,9 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 										<a target="_blank" href="<?php echo esc_url($total_team_instagram) ?>"><i class="fa fa-instagram"></i></a>
 									<?php } ?>
 								</div>
+							<?php } ?>
 
 							</div>
-							<?php } ?>
 					
 					<?php
 					endwhile;

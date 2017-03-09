@@ -1,0 +1,49 @@
+.wpml-ls-statics-shortcode_actions.wpml-ls{
+    @include responsive(1001) {
+        display: inline-block;
+    }
+    li{
+        transform: translateY(-2px);
+    }
+    a {
+        padding: 0;
+        img {
+            width: 24px;
+            height: auto;
+        }
+    }
+}
+.menu-main-menu-container{
+    @include responsive(1001) {
+        display: inline-block;
+    }
+}
+.ht-menu{
+    .wpml-ls-statics-shortcode_actions.wpml-ls{
+        //display: none;
+    }
+}
+
+.toggle-bar{
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    height: 40px;
+    width: 40px;
+    background: #FFC107;
+    cursor: pointer;
+    span{
+        position: absolute;
+        top: 50%;
+        margin-top: -2px;
+        height: 4px;
+        left: 8px;
+        right: 8px;
+        background: #FFF;
+        box-shadow: 0 10px 0 0 #FFF, 0 -10px 0 0 #FFF;
+    }
+    @include tablet{
+        display: none;
+    }
+}

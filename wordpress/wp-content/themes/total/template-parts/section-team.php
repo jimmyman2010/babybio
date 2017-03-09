@@ -58,42 +58,41 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 						$total_team_linkedin = get_theme_mod('total_team_linkedin'.$i);
 						$total_team_instagram = get_theme_mod('total_team_instagram'.$i);
 					?>
-						<div class="ht-team-member">
-							
-							<div class="ht-team-member-image">
-								<?php if( has_post_thumbnail() ){
-									$image_url = $total_image[0];
-								}else{
-									$image_url = get_template_directory_uri().'/images/team-thumb.png';
-								} ?>
-								
-								<img src="<?php echo esc_url($image_url);?>" alt="<?php the_title(); ?>" />
-								<div class="ht-title-wrap">
-								<h6><?php the_title(); ?></h6>
+							<?php if( $total_team_facebook || $total_team_twitter || $total_team_google_plus || $total_team_linkedin || $total_team_instagram ){ ?>
+							<div class="ht-team-member">
+
+								<div class="ht-team-member-image">
+									<?php if( has_post_thumbnail() ){
+										$image_url = $total_image[0];
+									}else{
+										$image_url = get_template_directory_uri().'/images/team-thumb.png';
+									} ?>
+
+									<img src="<?php echo esc_url($image_url);?>" alt="<?php the_title(); ?>" />
+									<div class="ht-title-wrap">
+									<h6><?php the_title(); ?></h6>
+									</div>
+
+									<div class="ht-team-member-excerpt">
+										<div class="ht-team-member-excerpt-wrap">
+										<div class="ht-team-member-span">
+											<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+
+											<?php if($total_team_designation){ ?>
+												<div class="ht-team-designation"><?php echo ($total_team_designation); ?></div>
+											<?php }
+
+											if(has_excerpt()){
+												echo get_the_excerpt();
+											}else{
+												echo total_excerpt( get_the_content() , 100 );
+											}
+										?>
+										<a href="<?php the_permalink(); ?>" class="ht-team-detail"><?php _e('Detail', 'total') ?></a>
+										</div>
+										</div>
+									</div>
 								</div>
-
-								<a href="<?php the_permalink(); ?>" class="ht-team-member-excerpt">
-									<div class="ht-team-member-excerpt-wrap">
-									<div class="ht-team-member-span">
-                                        <h6><?php the_title(); ?></h6>
-								
-        								<?php if($total_team_designation){ ?>
-											<div class="ht-team-designation"><?php echo ($total_team_designation); ?></div>
-										<?php }
-                                    
-										if(has_excerpt()){
-											echo get_the_excerpt();
-										}else{
-											echo total_excerpt( get_the_content() , 100 );
-										}
-									?>
-									<div class="ht-team-detail"><?php _e('Detail', 'total') ?></div>
-									</div>
-									</div>
-								</a>
-							</div>	
-
-							<?php if( $total_team_facebook || $total_team_twitter || $total_team_google_plus ){ ?>
 								<div class="ht-team-social-id">
 									<?php if($total_team_facebook){ ?>
 										<a target="_blank" href="<?php echo esc_url($total_team_facebook) ?>"><i class="fa fa-facebook"></i></a>
@@ -115,8 +114,9 @@ if(get_theme_mod('total_team_section_disable') != 'on' ){ ?>
 										<a target="_blank" href="<?php echo esc_url($total_team_instagram) ?>"><i class="fa fa-instagram"></i></a>
 									<?php } ?>
 								</div>
+
+							</div>
 							<?php } ?>
-						</div>
 					
 					<?php
 					endwhile;

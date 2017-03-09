@@ -32,4 +32,9 @@ function wpdocs_theme_setup() {
 
 
     add_theme_support( 'post-formats', array( 'image' ) );
+
 }
+
+define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
+define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
+define('ICL_DONT_LOAD_LANGUAGES_JS', true);

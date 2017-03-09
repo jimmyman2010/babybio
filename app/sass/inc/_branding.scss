@@ -1,0 +1,50 @@
+
+#ht-site-branding{
+    float: left;
+    //width: 30%;
+    width: 190px;
+    padding: 15px 0;
+    transition: padding 0.3s ease;
+    -moz-transition: padding 0.3s ease;
+    -webkit-transition: padding 0.3s ease;
+    img{
+        max-height: 60px;
+        width: auto;
+    }
+    @include tablet{
+        width: 80%;
+    }
+}
+
+.ht-sticky #ht-site-branding{
+    padding: 15px 0;
+    @include tablet{
+        padding: 5px 0;
+    }
+}
+
+#ht-site-navigation{
+    float: right;
+    width: 100px;
+    padding: 23px 0;
+    transition: padding 0.3s ease;
+    -moz-transition: padding 0.3s ease;
+    -webkit-transition: padding 0.3s ease;
+    @include tablet{
+        width: 70%;
+    }
+}
+
+#ht-masthead{
+    border-top: 4px solid #FFC107;
+    background: #FFF;
+    height: 86px;
+    border-bottom: 1px solid #F1F1F1;
+    z-index: 99;
+    transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+    -webkit-transition: height 0.3s ease;
+    @include tablet{
+        height: 94px;
+    }
+}

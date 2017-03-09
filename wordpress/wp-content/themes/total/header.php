@@ -37,14 +37,17 @@
 
 			<nav id="ht-site-navigation" class="ht-main-navigation">
 				<div class="toggle-bar"><span></span></div>
-				<?php 
-				wp_nav_menu( array( 
-					'theme_location' => 'primary', 
-					'container_class' => 'ht-menu ht-clearfix' ,
-					'menu_class' => 'ht-clearfix',
-					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-				) ); 
-				?>
+				<div class="ht-menu ht-clearfix">
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'primary',
+//						'container_class' => 'a' ,
+						'menu_class' => 'ht-clearfix',
+						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					) );
+					?>
+					<?php do_action('icl_language_selector'); ?>
+				</div>
 			</nav><!-- #ht-site-navigation -->
 		</div>
 	</header><!-- #ht-masthead -->

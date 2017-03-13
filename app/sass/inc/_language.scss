@@ -4,6 +4,9 @@
     }
     li{
         transform: translateY(-2px);
+        &:hover a{
+            background: none !important;
+        }
     }
     a {
         padding: 0;

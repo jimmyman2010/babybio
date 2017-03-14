@@ -313,22 +313,24 @@ function total_customize_register( $wp_customize ) {
 			)
 		);
 
-		$wp_customize->add_setting(
-			'total_about_progressbar_title_2'.$i,
-			array(
-				'sanitize_callback' => 'total_sanitize_text',
-				'default'			=> sprintf( __( 'Progress Bar %d', 'total') , $i )
-			)
-		);
-		$wp_customize->add_control(
-			'total_about_progressbar_title_2'.$i,
-			array(
-				'settings'		=> 'total_about_progressbar_title_2'.$i,
-				'section'		=> 'total_about_section',
-				'type'			=> 'text',
-				'label'			=> __( 'Title', 'total' ) . LANG_2
-			)
-		);
+		if(function_exists('icl_object_id')){
+			$wp_customize->add_setting(
+				'total_about_progressbar_title_2'.$i,
+				array(
+					'sanitize_callback' => 'total_sanitize_text',
+					'default'			=> sprintf( __( 'Progress Bar %d', 'total') , $i )
+				)
+			);
+			$wp_customize->add_control(
+				'total_about_progressbar_title_2'.$i,
+				array(
+					'settings'		=> 'total_about_progressbar_title_2'.$i,
+					'section'		=> 'total_about_section',
+					'type'			=> 'text',
+					'label'			=> __( 'Title', 'total' ) . LANG_2
+				)
+			);
+		}
 
 		$wp_customize->add_setting(
 			'total_about_progressbar_percentage'.$i,
@@ -389,24 +391,26 @@ function total_customize_register( $wp_customize ) {
 		    )
 		);
 
-		$wp_customize->add_setting(
-			'total_about_image_2',
-			array(
-				'sanitize_callback' => 'esc_url_raw'
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
+		if(function_exists('icl_object_id')) {
+			$wp_customize->add_setting(
 				'total_about_image_2',
 				array(
-					'section' => 'total_about_section',
-					'settings' => 'total_about_image_2',
-					'description' => __('Recommended Image Size: 500X600px', 'total') . LANG_2
+					'sanitize_callback' => 'esc_url_raw'
 				)
-			)
-		);
+			);
+
+			$wp_customize->add_control(
+				new WP_Customize_Image_Control(
+					$wp_customize,
+					'total_about_image_2',
+					array(
+						'section' => 'total_about_section',
+						'settings' => 'total_about_image_2',
+						'description' => __('Recommended Image Size: 500X600px', 'total') . LANG_2
+					)
+				)
+			);
+		}
 
 		$wp_customize->add_setting(
 			'total_about_widget',
@@ -499,23 +503,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_featured_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Featured Section', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_featured_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Featured Section', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_featured_title_2',
-		array(
-			'settings'		=> 'total_featured_title_2',
-			'section'		=> 'total_featured_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_featured_title_2',
+			array(
+				'settings' => 'total_featured_title_2',
+				'section' => 'total_featured_section',
+				'type' => 'text',
+				'label' => __('Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_featured_sub_title',
@@ -535,23 +541,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_featured_sub_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Featured Section SubTitle', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_featured_sub_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Featured Section SubTitle', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_featured_sub_title_2',
-		array(
-			'settings'		=> 'total_featured_sub_title_2',
-			'section'		=> 'total_featured_section',
-			'type'			=> 'textarea',
-			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_featured_sub_title_2',
+			array(
+				'settings' => 'total_featured_sub_title_2',
+				'section' => 'total_featured_section',
+				'type' => 'textarea',
+				'label' => __('Sub Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	//FEATURED PAGES
 	for( $i = 1; $i < 4; $i++ ){
@@ -684,23 +692,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_portfolio_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Portfolio Section', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_portfolio_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Portfolio Section', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_portfolio_title_2',
-		array(
-			'settings'		=> 'total_portfolio_title_2',
-			'section'		=> 'total_portfolio_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_portfolio_title_2',
+			array(
+				'settings' => 'total_portfolio_title_2',
+				'section' => 'total_portfolio_section',
+				'type' => 'text',
+				'label' => __('Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_portfolio_sub_title',
@@ -720,23 +730,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_portfolio_sub_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Portfolio Section SubTitle', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_portfolio_sub_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Portfolio Section SubTitle', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_portfolio_sub_title_2',
-		array(
-			'settings'		=> 'total_portfolio_sub_title_2',
-			'section'		=> 'total_portfolio_section',
-			'type'			=> 'textarea',
-			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_portfolio_sub_title_2',
+			array(
+				'settings' => 'total_portfolio_sub_title_2',
+				'section' => 'total_portfolio_section',
+				'type' => 'textarea',
+				'label' => __('Sub Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	//PORTFOLIO CHOICES
 	$wp_customize->add_setting(
@@ -849,23 +861,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_service_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Service Section', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_service_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Service Section', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_service_title_2',
-		array(
-			'settings'		=> 'total_service_title_2',
-			'section'		=> 'total_service_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_service_title_2',
+			array(
+				'settings' => 'total_service_title_2',
+				'section' => 'total_service_section',
+				'type' => 'text',
+				'label' => __('Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_service_sub_title',
@@ -885,23 +899,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_service_sub_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Service Section', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_service_sub_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Service Section', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_service_sub_title_2',
-		array(
-			'settings'		=> 'total_service_sub_title_2',
-			'section'		=> 'total_service_section',
-			'type'			=> 'textarea',
-			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_service_sub_title_2',
+			array(
+				'settings' => 'total_service_sub_title_2',
+				'section' => 'total_service_section',
+				'type' => 'textarea',
+				'label' => __('Sub Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	//SERVICE PAGES
 	for( $i = 1; $i < 7; $i++ ){
@@ -1003,25 +1019,27 @@ function total_customize_register( $wp_customize ) {
 	    )
 	);
 
-	$wp_customize->add_setting(
-		'total_service_left_bg_2',
-		array(
-			'sanitize_callback' => 'esc_url_raw',
-			'default'			=> get_template_directory_uri().'/images/banner.jpg'
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
 			'total_service_left_bg_2',
 			array(
-				'section' => 'total_service_section',
-				'settings' => 'total_service_left_bg_2',
-				'description' => __('Recommended Image Size: 770X650px', 'total') . LANG_2
+				'sanitize_callback' => 'esc_url_raw',
+				'default' => get_template_directory_uri() . '/images/banner.jpg'
 			)
-		)
-	);
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'total_service_left_bg_2',
+				array(
+					'section' => 'total_service_section',
+					'settings' => 'total_service_left_bg_2',
+					'description' => __('Recommended Image Size: 770X650px', 'total') . LANG_2
+				)
+			)
+		);
+	}
 
 	/*============TEAM SECTION PANEL============*/
 	$wp_customize->add_section(
@@ -1094,23 +1112,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_team_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Team Section', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_team_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Team Section', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_team_title_2',
-		array(
-			'settings'		=> 'total_team_title_2',
-			'section'		=> 'total_team_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_team_title_2',
+			array(
+				'settings' => 'total_team_title_2',
+				'section' => 'total_team_section',
+				'type' => 'text',
+				'label' => __('Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_team_sub_title',
@@ -1130,23 +1150,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_team_sub_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Team Section SubTitle', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_team_sub_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Team Section SubTitle', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_team_sub_title_2',
-		array(
-			'settings'		=> 'total_team_sub_title_2',
-			'section'		=> 'total_team_section',
-			'type'			=> 'textarea',
-			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_team_sub_title_2',
+			array(
+				'settings' => 'total_team_sub_title_2',
+				'section' => 'total_team_section',
+				'type' => 'textarea',
+				'label' => __('Sub Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	//TEAM PAGES
 	for( $i = 1; $i < 5; $i++ ){
@@ -1365,23 +1387,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_counter_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Counter Section', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_counter_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Counter Section', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_counter_title_2',
-		array(
-			'settings'		=> 'total_counter_title_2',
-			'section'		=> 'total_counter_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_counter_title_2',
+			array(
+				'settings' => 'total_counter_title_2',
+				'section' => 'total_counter_section',
+				'type' => 'text',
+				'label' => __('Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_counter_sub_title',
@@ -1401,23 +1425,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_counter_sub_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Counter Section SubTitle', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_counter_sub_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Counter Section SubTitle', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_counter_sub_title_2',
-		array(
-			'settings'		=> 'total_counter_sub_title_2',
-			'section'		=> 'total_counter_section',
-			'type'			=> 'textarea',
-			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_counter_sub_title_2',
+			array(
+				'settings' => 'total_counter_sub_title_2',
+				'section' => 'total_counter_section',
+				'type' => 'textarea',
+				'label' => __('Sub Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_counter_bg_heading',
@@ -1459,26 +1485,28 @@ function total_customize_register( $wp_customize ) {
 	    )
 	);
 
-	$wp_customize->add_setting(
-		'total_counter_bg_2',
-		array(
-			'sanitize_callback' => 'esc_url_raw',
-			'default'			=> get_template_directory_uri().'/images/banner.jpg'
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
 			'total_counter_bg_2',
 			array(
-				'label' => __( 'Upload Image', 'total' ),
-				'section' => 'total_counter_section',
-				'settings' => 'total_counter_bg_2',
-				'description' => __('Recommended Image Size: 1800X400px', 'total') . LANG_2
+				'sanitize_callback' => 'esc_url_raw',
+				'default' => get_template_directory_uri() . '/images/banner.jpg'
 			)
-		)
-	);
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'total_counter_bg_2',
+				array(
+					'label' => __('Upload Image', 'total'),
+					'section' => 'total_counter_section',
+					'settings' => 'total_counter_bg_2',
+					'description' => __('Recommended Image Size: 1800X400px', 'total') . LANG_2
+				)
+			)
+		);
+	}
 
 	//COUNTERS
 	for( $i = 1; $i < 5; $i++ ){
@@ -1519,22 +1547,24 @@ function total_customize_register( $wp_customize ) {
 			)
 		);
 
-		$wp_customize->add_setting(
-			'total_counter_title_2'.$i,
-			array(
-				'sanitize_callback' => 'total_sanitize_text'
-			)
-		);
+		if(function_exists('icl_object_id')) {
+			$wp_customize->add_setting(
+				'total_counter_title_2' . $i,
+				array(
+					'sanitize_callback' => 'total_sanitize_text'
+				)
+			);
 
-		$wp_customize->add_control(
-			'total_counter_title_2'.$i,
-			array(
-				'settings'		=> 'total_counter_title_2'.$i,
-				'section'		=> 'total_counter_section',
-				'type'			=> 'text',
-				'label'			=> __( 'Title', 'total' ) . LANG_2
-			)
-		);
+			$wp_customize->add_control(
+				'total_counter_title_2' . $i,
+				array(
+					'settings' => 'total_counter_title_2' . $i,
+					'section' => 'total_counter_section',
+					'type' => 'text',
+					'label' => __('Title', 'total') . LANG_2
+				)
+			);
+		}
 
 		$wp_customize->add_setting(
 			'total_counter_count'.$i,
@@ -1646,23 +1676,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_testimonial_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Testimonial Section', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_testimonial_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Testimonial Section', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_testimonial_title_2',
-		array(
-			'settings'		=> 'total_testimonial_title_2',
-			'section'		=> 'total_testimonial_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_testimonial_title_2',
+			array(
+				'settings' => 'total_testimonial_title_2',
+				'section' => 'total_testimonial_section',
+				'type' => 'text',
+				'label' => __('Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_testimonial_sub_title',
@@ -1682,23 +1714,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_testimonial_sub_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Testimonial Section SubTitle', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_testimonial_sub_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Testimonial Section SubTitle', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_testimonial_sub_title_2',
-		array(
-			'settings'		=> 'total_testimonial_sub_title_2',
-			'section'		=> 'total_testimonial_section',
-			'type'			=> 'textarea',
-			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_testimonial_sub_title_2',
+			array(
+				'settings' => 'total_testimonial_sub_title_2',
+				'section' => 'total_testimonial_section',
+				'type' => 'textarea',
+				'label' => __('Sub Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	//TESTIMONIAL PAGES
 	$wp_customize->add_setting(
@@ -1812,23 +1846,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_blog_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Blog Section', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_blog_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Blog Section', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_blog_title_2',
-		array(
-			'settings'		=> 'total_blog_title_2',
-			'section'		=> 'total_blog_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_blog_title_2',
+			array(
+				'settings' => 'total_blog_title_2',
+				'section' => 'total_blog_section',
+				'type' => 'text',
+				'label' => __('Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_blog_sub_title',
@@ -1848,23 +1884,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_blog_sub_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Blog Section SubTitle', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_blog_sub_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Blog Section SubTitle', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_blog_sub_title_2',
-		array(
-			'settings'		=> 'total_blog_sub_title_2',
-			'section'		=> 'total_blog_section',
-			'type'			=> 'textarea',
-			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_blog_sub_title_2',
+			array(
+				'settings' => 'total_blog_sub_title_2',
+				'section' => 'total_blog_section',
+				'type' => 'textarea',
+				'label' => __('Sub Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	//BLOG SETTINGS
 	$wp_customize->add_setting(
@@ -1979,23 +2017,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_logo_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Client Logo Section', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_logo_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Client Logo Section', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_logo_title_2',
-		array(
-			'settings'		=> 'total_logo_title_2',
-			'section'		=> 'total_client_logo_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_logo_title_2',
+			array(
+				'settings' => 'total_logo_title_2',
+				'section' => 'total_client_logo_section',
+				'type' => 'text',
+				'label' => __('Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_logo_sub_title',
@@ -2015,23 +2055,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_logo_sub_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Clients Logo Section SubTitle', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_logo_sub_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Clients Logo Section SubTitle', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_logo_sub_title_2',
-		array(
-			'settings'		=> 'total_logo_sub_title_2',
-			'section'		=> 'total_client_logo_section',
-			'type'			=> 'textarea',
-			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_logo_sub_title_2',
+			array(
+				'settings' => 'total_logo_sub_title_2',
+				'section' => 'total_client_logo_section',
+				'type' => 'textarea',
+				'label' => __('Sub Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	//CLIENTS LOGOS
 	$wp_customize->add_setting(
@@ -2105,23 +2147,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_cta_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Call To Action Section', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_cta_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Call To Action Section', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_cta_title_2',
-		array(
-			'settings'		=> 'total_cta_title_2',
-			'section'		=> 'total_cta_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_cta_title_2',
+			array(
+				'settings' => 'total_cta_title_2',
+				'section' => 'total_cta_section',
+				'type' => 'text',
+				'label' => __('Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_cta_sub_title',
@@ -2141,23 +2185,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_cta_sub_title_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text',
-			'default'			=> __( 'Call To Action Section SubTitle', 'total' )
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_cta_sub_title_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text',
+				'default' => __('Call To Action Section SubTitle', 'total')
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_cta_sub_title_2',
-		array(
-			'settings'		=> 'total_cta_sub_title_2',
-			'section'		=> 'total_cta_section',
-			'type'			=> 'textarea',
-			'label'			=> __( 'Sub Title', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_cta_sub_title_2',
+			array(
+				'settings' => 'total_cta_sub_title_2',
+				'section' => 'total_cta_section',
+				'type' => 'textarea',
+				'label' => __('Sub Title', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_cta_button1_text',
@@ -2176,22 +2222,24 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_cta_button1_text_2',
-		array(
-			'sanitize_callback' => 'total_sanitize_text'
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_cta_button1_text_2',
+			array(
+				'sanitize_callback' => 'total_sanitize_text'
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_cta_button1_text_2',
-		array(
-			'settings'		=> 'total_cta_button1_text_2',
-			'section'		=> 'total_cta_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Button 1 Text', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_cta_button1_text_2',
+			array(
+				'settings' => 'total_cta_button1_text_2',
+				'section' => 'total_cta_section',
+				'type' => 'text',
+				'label' => __('Button 1 Text', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_cta_button1_link',
@@ -2211,23 +2259,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_cta_button1_link_2',
-		array(
-			'default'			=> '',
-			'sanitize_callback' => 'esc_url_raw'
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_cta_button1_link_2',
+			array(
+				'default' => '',
+				'sanitize_callback' => 'esc_url_raw'
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_cta_button1_link_2',
-		array(
-			'settings'		=> 'total_cta_button1_link_2',
-			'section'		=> 'total_cta_section',
-			'type'			=> 'url',
-			'label'			=> __( 'Button 1 Link', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_cta_button1_link_2',
+			array(
+				'settings' => 'total_cta_button1_link_2',
+				'section' => 'total_cta_section',
+				'type' => 'url',
+				'label' => __('Button 1 Link', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_cta_button2_text',
@@ -2247,23 +2297,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_cta_button2_text_2',
-		array(
-			'default'			=> '',
-			'sanitize_callback' => 'total_sanitize_text'
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_cta_button2_text_2',
+			array(
+				'default' => '',
+				'sanitize_callback' => 'total_sanitize_text'
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_cta_button2_text_2',
-		array(
-			'settings'		=> 'total_cta_button2_text_2',
-			'section'		=> 'total_cta_section',
-			'type'			=> 'text',
-			'label'			=> __( 'Button 2 Text', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_cta_button2_text_2',
+			array(
+				'settings' => 'total_cta_button2_text_2',
+				'section' => 'total_cta_section',
+				'type' => 'text',
+				'label' => __('Button 2 Text', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_cta_button2_link',
@@ -2283,23 +2335,25 @@ function total_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'total_cta_button2_link_2',
-		array(
-			'default'			=> '',
-			'sanitize_callback' => 'esc_url_raw'
-		)
-	);
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
+			'total_cta_button2_link_2',
+			array(
+				'default' => '',
+				'sanitize_callback' => 'esc_url_raw'
+			)
+		);
 
-	$wp_customize->add_control(
-		'total_cta_button2_link_2',
-		array(
-			'settings'		=> 'total_cta_button2_link_2',
-			'section'		=> 'total_cta_section',
-			'type'			=> 'url',
-			'label'			=> __( 'Button 2 Link', 'total' ) . LANG_2
-		)
-	);
+		$wp_customize->add_control(
+			'total_cta_button2_link_2',
+			array(
+				'settings' => 'total_cta_button2_link_2',
+				'section' => 'total_cta_section',
+				'type' => 'url',
+				'label' => __('Button 2 Link', 'total') . LANG_2
+			)
+		);
+	}
 
 	$wp_customize->add_setting(
 		'total_cta_bg',
@@ -2322,26 +2376,28 @@ function total_customize_register( $wp_customize ) {
 	    )
 	);
 
-	$wp_customize->add_setting(
-		'total_cta_bg_2',
-		array(
-			'sanitize_callback' => 'esc_url_raw',
-			'default'			=> get_template_directory_uri().'/images/banner.jpg'
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
+	if(function_exists('icl_object_id')) {
+		$wp_customize->add_setting(
 			'total_cta_bg_2',
 			array(
-				'label' => __( 'Background Image', 'total' ),
-				'section' => 'total_cta_section',
-				'settings' => 'total_cta_bg_2',
-				'description' => __('Recommended Image Size: 1800X800px', 'total') . LANG_2
+				'sanitize_callback' => 'esc_url_raw',
+				'default' => get_template_directory_uri() . '/images/banner.jpg'
 			)
-		)
-	);
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'total_cta_bg_2',
+				array(
+					'label' => __('Background Image', 'total'),
+					'section' => 'total_cta_section',
+					'settings' => 'total_cta_bg_2',
+					'description' => __('Recommended Image Size: 1800X800px', 'total') . LANG_2
+				)
+			)
+		);
+	}
 
 	/*============IMPORTANT LINKS============*/
 	$wp_customize->add_section(

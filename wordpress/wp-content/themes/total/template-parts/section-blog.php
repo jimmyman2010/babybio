@@ -9,11 +9,11 @@ if(get_theme_mod('total_blog_section_disable') != 'on' ){ ?>
 	<div class="ht-container">
 		<?php
 		$total_blog_title = get_theme_mod('total_blog_title');
-		if(ICL_LANGUAGE_CODE !== 'en'){
+		if(function_exists('icl_object_id') && ICL_LANGUAGE_CODE !== 'en'){
 			$total_blog_title = get_theme_mod('total_blog_title_2');
 		}
 		$total_blog_sub_title = get_theme_mod('total_blog_sub_title');
-		if(ICL_LANGUAGE_CODE !== 'en'){
+		if(function_exists('icl_object_id') && ICL_LANGUAGE_CODE !== 'en'){
 			$total_blog_sub_title = get_theme_mod('total_blog_sub_title_2');
 		}
 		?>

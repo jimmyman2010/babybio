@@ -16,9 +16,21 @@ function get_the_content_with_formatting ($more_link_text = '(more...)', $stript
 function button_func( $atts, $content = "Click here" ) {
     $atts = shortcode_atts( array(
         'color' => 'green',
-        'link' => 'javascript:void(0);'
+        'link' => 'javascript:void(0);',
+        'sm' => ''
     ), $atts, 'button' );
-    $html = '<a class="button button--' . $atts['color'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
+    if($atts['sm']){
+        $icon = 'fa fa-' . $atts['sm'];
+        if($atts['sm'] === 'email'){
+            $icon = 'fa fa-envelope-o';
+        }
+        if($atts['sm'] === 'facebook' || $atts['sm'] === 'twitter'){
+            $icon .= '-square';
+        }
+        $html = '<a class="button button--' . $atts['sm'] . '" href="' . $atts['link'] . '"><i class="' . $icon . '"></i>' . $content . '</a>';
+    } else {
+        $html = '<a class="button button--' . $atts['color'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
+    }
 
     return $html;
 }

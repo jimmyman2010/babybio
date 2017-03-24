@@ -21,13 +21,15 @@ function button_func( $atts, $content = "Click here" ) {
     ), $atts, 'button' );
     if($atts['sm']){
         $icon = 'fa fa-' . $atts['sm'];
+        $target = 'target="_blank"';
         if($atts['sm'] === 'email'){
             $icon = 'fa fa-envelope-o';
+            $target = '';
         }
         if($atts['sm'] === 'facebook' || $atts['sm'] === 'twitter'){
             $icon .= '-square';
         }
-        $html = '<a target="_blank" class="button button--' . $atts['sm'] . '" href="' . $atts['link'] . '"><i class="' . $icon . '"></i>' . $content . '</a>';
+        $html = '<a ' . $target . ' class="button button--' . $atts['sm'] . '" href="' . $atts['link'] . '"><i class="' . $icon . '"></i>' . $content . '</a>';
     } else {
         $html = '<a class="button button--' . $atts['color'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
     }

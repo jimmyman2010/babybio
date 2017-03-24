@@ -27,7 +27,7 @@ function button_func( $atts, $content = "Click here" ) {
         if($atts['sm'] === 'facebook' || $atts['sm'] === 'twitter'){
             $icon .= '-square';
         }
-        $html = '<a class="button button--' . $atts['sm'] . '" href="' . $atts['link'] . '"><i class="' . $icon . '"></i>' . $content . '</a>';
+        $html = '<a target="_blank" class="button button--' . $atts['sm'] . '" href="' . $atts['link'] . '"><i class="' . $icon . '"></i>' . $content . '</a>';
     } else {
         $html = '<a class="button button--' . $atts['color'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
     }

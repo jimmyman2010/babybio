@@ -8,7 +8,7 @@
 .button{
     display: inline-block;
     background-color: $color-green;
-    color: white;
+    color: white !important;
     padding: 5px 20px;
     text-align: center;
     border: 1px solid $color-green;
@@ -19,7 +19,7 @@
     outline: none;
     &:hover{
         background-color: #333;
-        color: white;
+        color: white !important;
         border-color: #333;
     }
     i{
@@ -45,7 +45,7 @@
     border-color: $color-pink;
     &:hover{
         background-color: #333;
-        color: white;
+        color: white !important;
         border-color: #333;
     }
 
@@ -87,3 +87,18 @@
 @import "inc/counter";
 
 @import "pages/image";
+
+.ht-container-inner{
+    background-color: rgba(#ffffff, 0.56);
+    color: #444;
+    padding: 10px;
+    max-width: 820px;
+    margin: 0 auto;
+    .ht-section-title,
+    .ht-section-tagline{
+        width: auto;
+    }
+    @include tablet{
+        padding: 20px;
+    }
+}

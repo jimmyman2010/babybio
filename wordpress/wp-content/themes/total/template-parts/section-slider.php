@@ -20,8 +20,6 @@
 				while($query->have_posts()) : $query->the_post();
 				?>
 				<div class="ht-slide">
-					<div class="ht-slide-overlay"></div>
-
 					<?php 
 					if(has_post_thumbnail()){
 						$total_slider_image = wp_get_attachment_image_src(get_post_thumbnail_id(),'full');	
@@ -29,12 +27,14 @@
 					} ?>
 				
 					<div class="ht-slide-caption">
-						<div class="ht-slide-cap-title animated fadeInDown">
-							<span><?php echo get_the_title(); ?></span>
-						</div>
+						<div class="ht-slide-caption-inner">
+							<div class="ht-slide-cap-title animated fadeInDown">
+								<span><?php echo get_the_title(); ?></span>
+							</div>
 
-						<div class="ht-slide-cap-desc animated fadeInDown">
-							<?php echo get_the_content_with_formatting(); ?>
+							<div class="ht-slide-cap-desc animated fadeInDown">
+								<?php echo get_the_content_with_formatting(); ?>
+							</div>
 						</div>
 					</div>
 				</div>

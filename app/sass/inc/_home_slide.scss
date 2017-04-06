@@ -7,6 +7,14 @@
 
 .ht-slide img{
     width: 100%;
+    @include tablet{
+        width: auto;
+        max-width: none;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        @include transform(translateX(-50%));
+    }
 }
 
 .ht-slide-overlay{
@@ -19,23 +27,23 @@
 }
 
 .ht-slide-caption{
-    padding-bottom: 20px;
-    background-color: #add36a;
-    @include tablet{
-        position: absolute;
-        background-color: transparent;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-
-        width: 80%;
-        margin-left: -40%;
+    position: relative;
+    @include tablet {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 50px 0;
     }
-    @include desktop{
-        width: 1170px;
-        margin-left: -585px;
+    @include desktop {
+        min-height: 450px;
+    }
+
+    .ht-slide-caption-inner{
+        background-color: #72bf44;
+        padding-bottom: 20px;
+        @include tablet {
+            background-color: rgba(#ffffff, 0.65);
+            padding: 20px 10px;
+        }
     }
 }
 
@@ -53,9 +61,9 @@
     //text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     margin-bottom: 10px;
     @include tablet{
-        font-size: 38px;
-        margin-bottom: 25px;
-        padding: 0 10%;
+        font-size: 32px;
+        margin-bottom: 20px;
+        //padding: 0 10%;
     }
     span{
         display: block;
@@ -69,9 +77,9 @@
 
 .ht-slide-cap-desc{
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.4;
-    color: #000;
+    color: #fff;
     text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
@@ -79,8 +87,10 @@
     animation-delay: 1s;
     padding: 0 10px;
     @include tablet{
-        font-size: 25px;
-        padding: 0 20%;
+        color: #444;
+        font-size: 23px;
+        line-height: 1.2;
+        //padding: 0 20%;
     }
 }
 

@@ -235,7 +235,7 @@ select,
 textarea {
 	color: #444;
 	font-size: 18px;
-	line-height: 1.6;
+	line-height: 1.4;
 	font-family: 'Pontano Sans', sans-serif;
 	font-weight: 400;
 }
@@ -2784,8 +2784,12 @@ object {
 }
 
 @media screen and (max-width: 768px){
-	.ht-section-title,
+	.ht-section-title{
+		font-size: 28px;
+		width: auto;
+	}
 	.ht-section-tagline{
+		font-size: 18px;
 		width: auto;
 	}
 

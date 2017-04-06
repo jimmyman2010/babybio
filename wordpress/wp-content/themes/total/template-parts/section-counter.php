@@ -11,31 +11,32 @@ if(get_theme_mod('total_counter_section_disable') != 'on' ){ ?>
 	} ?>
 <section id="ht-counter-section" data-stellar-background-ratio="0.5" style="background-image: url('<?= $total_counter_bg ?>');">
     <div class="ht-counter-section ht-section">
-    <div class="ht-counter-overlay"></div>
     	<div class="ht-container">
-    		<?php
-    		$total_counter_title = get_theme_mod('total_counter_title');
-			if(function_exists('icl_object_id') && ICL_LANGUAGE_CODE !== 'en'){
-				$total_counter_title = get_theme_mod('total_counter_title_2');
-			}
-    		$total_counter_sub_title = get_theme_mod('total_counter_sub_title');
-			if(function_exists('icl_object_id') && ICL_LANGUAGE_CODE !== 'en'){
-				$total_counter_sub_title = get_theme_mod('total_counter_sub_title_2');
-			}
-    		?>
-    		<?php 
-    		if($total_counter_title || $total_counter_sub_title){
-    		?>
-    			<div class="ht-section-title-tagline">
-    				<?php if($total_counter_title){ ?>
-    				<h2 class="ht-section-title"><?php echo ($total_counter_title); ?></h2>
-    				<?php } ?>
-    
-    				<?php if($total_counter_sub_title){ ?>
-    				<div class="ht-section-tagline"><?php echo ($total_counter_sub_title); ?></div>
-    				<?php } ?>
-    			</div>
-    		<?php } ?>
+			<div class="ht-container-inner">
+				<?php
+				$total_counter_title = get_theme_mod('total_counter_title');
+				if(function_exists('icl_object_id') && ICL_LANGUAGE_CODE !== 'en'){
+					$total_counter_title = get_theme_mod('total_counter_title_2');
+				}
+				$total_counter_sub_title = get_theme_mod('total_counter_sub_title');
+				if(function_exists('icl_object_id') && ICL_LANGUAGE_CODE !== 'en'){
+					$total_counter_sub_title = get_theme_mod('total_counter_sub_title_2');
+				}
+				?>
+				<?php
+				if($total_counter_title || $total_counter_sub_title){
+				?>
+					<div class="ht-section-title-tagline">
+						<?php if($total_counter_title){ ?>
+						<h2 class="ht-section-title"><?php echo ($total_counter_title); ?></h2>
+						<?php } ?>
+
+						<?php if($total_counter_sub_title){ ?>
+						<div class="ht-section-tagline"><?php echo ($total_counter_sub_title); ?></div>
+						<?php } ?>
+					</div>
+				<?php } ?>
+			</div>
     
     		<div class="ht-team-counter-wrap ht-clearfix">
     			<?php 

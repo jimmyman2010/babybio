@@ -17,21 +17,27 @@ function button_func( $atts, $content = "Click here" ) {
     $atts = shortcode_atts( array(
         'color' => 'green',
         'link' => 'javascript:void(0);',
+        'target' => '',
         'sm' => ''
     ), $atts, 'button' );
     if($atts['sm']){
         $icon = 'fa fa-' . $atts['sm'];
-        $target = 'target="_blank"';
+        if($atts['target']){ } else {
+            $atts['target'] = '_blank';
+        }
         if($atts['sm'] === 'email'){
             $icon = 'fa fa-envelope-o';
-            $target = '';
+            $atts['target'] = '_self';
         }
         if($atts['sm'] === 'facebook' || $atts['sm'] === 'twitter'){
             $icon .= '-square';
         }
-        $html = '<a ' . $target . ' class="button button--' . $atts['sm'] . '" href="' . $atts['link'] . '"><i class="' . $icon . '"></i>' . $content . '</a>';
+        $html = '<a target="' . $atts['target'] . '" class="button button--' . $atts['sm'] . '" href="' . $atts['link'] . '"><i class="' . $icon . '"></i>' . $content . '</a>';
     } else {
-        $html = '<a class="button button--' . $atts['color'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
+        if($atts['target']){ } else {
+            $atts['target'] = '_self';
+        }
+        $html = '<a target="' . $atts['target'] . '" class="button button--' . $atts['color'] . '" href="' . $atts['link'] . '">' . $content . '</a>';
     }
 
     return $html;

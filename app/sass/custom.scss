@@ -102,3 +102,20 @@
         padding: 20px;
     }
 }
+.ht-counter-section{
+    .ht-section-title,
+    .ht-section-tagline{
+        color: white;
+    }
+}
+.ht-cta-section{
+    .ht-section-title{
+        color: $color-green;
+    }
+}
+.ht-cta-buttons a.ht-cta-button2{
+    background-color: $color-pink !important;
+    &:hover{
+        background-color: #333 !important;
+    }
+}

@@ -431,7 +431,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #333;
+	background: #72bf44;
 }
 
 button:focus,
@@ -817,7 +817,7 @@ a:active {
 }
 
 .entry-readmore a:hover{
-	background: #333;
+	background: #72bf44;
 	color: #FFF;
 }
 
@@ -1076,7 +1076,7 @@ article.comment-body {
 
 .pagination .page-numbers.current,
 .pagination .page-numbers:hover{
-    background: #333;
+    background: #72bf44;
     color: #FFF;
 }
 
@@ -1851,7 +1851,7 @@ object {
 }
 
 .ht-testimonial-wrap .bx-wrapper .bx-controls-direction a:hover{
-	background: #333;
+	background: #72bf44;
 }
 
 /*--------------------------------------------------------------
@@ -1941,7 +1941,7 @@ object {
 }
 
 .ht-blog-read-more a:hover{
-	background: #333;
+	background: #72bf44;
 	color: #FFF;
 }
 
@@ -2004,7 +2004,7 @@ object {
 }
 
 .ht-cta-buttons a.ht-cta-button1:hover{
-	background: #333;
+	background: #72bf44;
 	color: #FFF;
 }
 
@@ -2301,8 +2301,8 @@ object {
 .woocommerce a.button:hover, 
 .woocommerce button.button:hover, 
 .woocommerce input.button:hover{
-	background: #333;
-	border:1px solid #333;
+	background: #72bf44;
+	border:1px solid #72bf44;
 	color: #FFF;
 }
 
@@ -2349,8 +2349,8 @@ object {
 .woocommerce a.button.alt:hover, 
 .woocommerce button.button.alt:hover, 
 .woocommerce input.button.alt:hover{
-	background: #333;
-	border-color: #333;
+	background: #72bf44;
+	border-color: #72bf44;
 	color: #FFF;
 }
 
@@ -2523,7 +2523,7 @@ object {
 .woocommerce input.button.disabled:hover, 
 .woocommerce input.button:disabled:hover, 
 .woocommerce input.button:disabled[disabled]:hover{
-	background: #333;
+	background: #72bf44;
 	color: #FFF;
 }
 
@@ -2684,7 +2684,7 @@ object {
 
 .woocommerce-MyAccount-navigation-link.is-active a,
 .woocommerce-MyAccount-navigation-link a:hover{
-	background: #333;
+	background: #72bf44;
 }
 
 @media screen and (max-width: 1200px){

@@ -9,7 +9,7 @@
     display: inline-block;
     background-color: $color-green;
     color: white !important;
-    padding: 5px 20px;
+    padding: 8px 20px 9px;
     text-align: center;
     border: 1px solid $color-green;
     @include border-radius(1px);
@@ -18,9 +18,9 @@
     text-shadow: none !important;
     outline: none;
     &:hover{
-        background-color: #333;
+        background-color: $color-light-green;
         color: white !important;
-        border-color: #333;
+        border-color: $color-light-green;
     }
     i{
         margin-right: 10px;
@@ -34,9 +34,7 @@
     background-color: white;
     border-color: $color-grey;
     &:hover{
-        background-color: #333;
         color: white !important;
-        border-color: #333;
     }
 }
 
@@ -44,9 +42,9 @@
     background-color: $color-pink;
     border-color: $color-pink;
     &:hover{
-        background-color: #333;
+        background-color: $color-light-pink;
         color: white !important;
-        border-color: #333;
+        border-color: $color-light-pink;
     }
 
 }
@@ -116,6 +114,6 @@
 .ht-cta-buttons a.ht-cta-button2{
     background-color: $color-pink !important;
     &:hover{
-        background-color: #333 !important;
+        background-color: $color-light-pink !important;
     }
 }

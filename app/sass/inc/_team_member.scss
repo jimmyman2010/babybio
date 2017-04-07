@@ -24,7 +24,7 @@
         width: 32px;
         border-radius: 50%;
         &:hover{
-            background: #333;
+            background: $color-light-green;
             color: #FFF;
         }
     }
@@ -128,7 +128,7 @@
     line-height: 30px;
     font-size: 0.9em;
     &:hover{
-        background: #333;
+        background: $color-light-green;
         color: #FFF;
     }
 }

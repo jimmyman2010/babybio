@@ -22,10 +22,12 @@
 				if(has_post_thumbnail()){
 					$total_slider_image = wp_get_attachment_image_src(get_post_thumbnail_id(),'full');
 					echo '<div class="ht-slide ht-slide--cover" style="background-image: url(' . esc_url($total_slider_image[0]) . ')">';
+					echo '<img src="' . esc_url($total_slider_image[0]) . '" alt="' . esc_html(get_the_title()) . '" />';
 				} else {
 					echo '<div class="ht-slide">';
 				}
 				?>
+
 					<div class="ht-slide-caption">
 						<div class="ht-slide-caption-inner">
 							<div class="ht-slide-cap-title animated fadeInDown">

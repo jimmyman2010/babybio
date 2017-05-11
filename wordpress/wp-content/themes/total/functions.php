@@ -202,8 +202,8 @@ function total_fonts_url() {
 	 * Translators: If there are characters in your language that are not supported
 	 * by Open Sans, translate this to 'off'. Do not translate into your own language.
 	 */
-	if ( 'off' !== _x( 'on', 'Pontano Sans font: on or off', 'total' ) ) {
-		$fonts[] = 'Pontano+Sans';
+	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'total' ) ) {
+		$fonts[] = 'Open+Sans';
 	}
 
 	/*
@@ -218,7 +218,7 @@ function total_fonts_url() {
 	 * Translators: To add an additional character subset specific to your language,
 	 * translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
 	 */
-	$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'total' );
+	$subset = _x( 'vietnamese', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'total' );
 
 	if ( 'cyrillic' == $subset ) {
 		$subsets .= ',cyrillic,cyrillic-ext';

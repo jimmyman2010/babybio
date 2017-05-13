@@ -41,9 +41,15 @@ if(get_theme_mod('total_featured_section_disable') != 'on' ){ ?>
 				$total_featured_page_icon = get_theme_mod('total_featured_page_icon'.$i);
 			
 			if($total_featured_page_id){
-				$args = array( 
-                    'page_id' => absint($total_featured_page_id) 
-                    );
+				if(ICL_LANGUAGE_CODE !== 'en') {
+					$args = array(
+						'page_id' => apply_filters('wpml_object_id', absint($total_featured_page_id), 'page', TRUE)
+					);
+				} else {
+					$args = array(
+						'page_id' => absint($total_featured_page_id)
+					);
+				}
 				$query = new WP_Query($args);
 				if( $query->have_posts() ):
 					while($query->have_posts()) : $query->the_post();

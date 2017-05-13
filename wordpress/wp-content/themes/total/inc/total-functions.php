@@ -146,6 +146,17 @@ function total_breadcrumbs(){
 	$text['tag']      = __( 'Posts Tagged "%s"', 'total' ); // text for a tag page
 	$text['author']   = __( 'Articles Posted by %s', 'total' ); // text for an author page
 	$text['404']      = __( 'Error 404', 'total' ); // text for the 404 page
+
+	if(ICL_LANGUAGE_CODE !== 'en'){
+		$text['home']     = __( 'Trang chủ', 'total' ); // text for the 'Home' link
+		$text['category'] = __( 'Danh mục "%s"', 'total' ); // text for a category page
+		$text['tax'] 	  = __( 'Lưu trữ "%s"', 'total' ); // text for a taxonomy page
+		$text['search']   = __( 'Kết quả tìm kiếm cho "%s"', 'total' ); // text for a search results page
+		$text['tag']      = __( 'Tag "%s"', 'total' ); // text for a tag page
+		$text['author']   = __( 'Tác giả %s', 'total' ); // text for an author page
+		$text['404']      = __( 'Lỗi 404', 'total' ); // text for the 404 page
+	}
+
 	$showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
 	$showOnHome  = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
 	$delimiter   = ' &#47; '; // delimiter between crumbs

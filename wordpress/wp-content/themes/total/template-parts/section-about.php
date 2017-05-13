@@ -11,9 +11,15 @@ if(get_theme_mod('total_about_page_disable') != 'on' ){ ?>
 		<?php 
             $total_about_page_id = get_theme_mod('total_about_page');
 			if($total_about_page_id){
-                $args = array(
-    				'page_id' => absint($total_about_page_id)
-    				);
+				if(ICL_LANGUAGE_CODE !== 'en') {
+					$args = array(
+						'page_id' => apply_filters('wpml_object_id', absint($total_about_page_id), 'page', TRUE)
+					);
+				} else {
+					$args = array(
+						'page_id' => absint($total_about_page_id)
+					);
+				}
     			$query = new WP_Query($args);
     			if($query->have_posts()):
     				while($query->have_posts()) : $query->the_post();

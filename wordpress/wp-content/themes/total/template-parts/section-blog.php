@@ -35,6 +35,13 @@ if(get_theme_mod('total_blog_section_disable') != 'on' ){ ?>
 			$total_blog_cat_exclude = get_theme_mod('total_blog_cat_exclude');
             $total_blog_cat_exclude = explode(',', $total_blog_cat_exclude);
 
+		if(ICL_LANGUAGE_CODE !== 'en') {
+			foreach($total_blog_cat_exclude as $index => $value){
+				if(is_numeric($value) && apply_filters('wpml_object_id', $value, 'category', TRUE)){
+					$total_blog_cat_exclude[$index] = apply_filters('wpml_object_id', $value, 'category', TRUE);
+				}
+			}
+		}
 			$args = array(
 				'posts_per_page' => absint($total_blog_post_count),
 				'category__not_in' => $total_blog_cat_exclude

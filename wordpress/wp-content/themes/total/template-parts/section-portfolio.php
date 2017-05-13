@@ -60,7 +60,18 @@ if(get_theme_mod('total_portfolio_section_disable') != 'on' ){ ?>
 			<?php 
 			if($total_portfolio_cat){
 			$count = 1;
-			$args = array( 'cat' => $total_portfolio_cat, 'posts_per_page' => -1 );
+
+				$total_portfolio_cat_flag = $total_portfolio_cat;
+				if(ICL_LANGUAGE_CODE !== 'en') {
+					if(is_numeric($total_portfolio_cat) && apply_filters('wpml_object_id', $total_portfolio_cat, 'category', TRUE)){
+						$total_portfolio_cat = apply_filters('wpml_object_id', $total_portfolio_cat, 'category', TRUE);
+					}
+				}
+
+			$args = array(
+				'cat' => $total_portfolio_cat_flag,
+				'posts_per_page' => -1
+			);
 			$query = new WP_Query($args);
 			if($query->have_posts()):
 				while($query->have_posts()) : $query->the_post();	

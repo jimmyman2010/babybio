@@ -203,7 +203,7 @@ function total_fonts_url() {
 	 * by Open Sans, translate this to 'off'. Do not translate into your own language.
 	 */
 	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'total' ) ) {
-		$fonts[] = 'Open+Sans';
+		$fonts[] = 'Open+Sans:400,600';
 	}
 
 	/*

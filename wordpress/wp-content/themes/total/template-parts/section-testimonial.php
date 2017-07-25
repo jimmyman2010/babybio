@@ -35,6 +35,15 @@ if(get_theme_mod('total_testimonial_section_disable') != 'on' ){ ?>
 			$total_testimonial_page = get_theme_mod('total_testimonial_page');
 
 				if(is_array($total_testimonial_page)){
+
+					if(ICL_LANGUAGE_CODE !== 'en') {
+						foreach($total_testimonial_page as $index => $value){
+							if(is_numeric($value) && apply_filters('wpml_object_id', $value, 'category', TRUE)){
+								$total_testimonial_page[$index] = apply_filters('wpml_object_id', $value, 'category', TRUE);
+							}
+						}
+					}
+
 					$args = array(
 						'post_type' => 'page',
 						'post__in' => $total_testimonial_page,

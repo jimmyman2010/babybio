@@ -236,7 +236,7 @@ textarea {
 	color: #444;
 	font-size: 18px;
 	line-height: 1.4;
-	font-family: 'Pontano Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 }
 
@@ -253,12 +253,14 @@ h6 {
 }
 
 h1{
-	font-size: 28px;
+	font-size: 36px;
+	line-height: 1;
 	margin-bottom: 15px;
 }
 
 h2{
 	font-size: 26px;
+	line-height: 1.1;
 	margin-bottom: 15px;
 }
 
@@ -1352,6 +1354,10 @@ object {
 	float: right;
 }
 
+.ht-main-navigation .ht-menu > div{
+	display: inline-block;
+}
+
 .ht-main-navigation ul {
 	list-style: none;
 	margin: 0;
@@ -2262,7 +2268,7 @@ object {
 }
 
 .woocommerce ul.products li.product h3{
-	font-family: 'Pontano Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	margin: 0 0 6px;
 	padding: 0;
 }

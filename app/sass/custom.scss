@@ -55,14 +55,29 @@
 .button--facebook{
     background-color: #3b5998;
     border-color: #3b5998;
+    &:hover{
+        background-color: #3b5998 !important;
+        border-color: #3b5998 !important;
+        opacity: 0.7;
+    }
 }
 .button--instagram{
     background-color: #c13584;
     border-color: #c13584;
+    &:hover{
+        background-color: #c13584 !important;
+        border-color: #c13584 !important;
+        opacity: 0.7;
+    }
 }
 .button--twitter{
     background-color: #00aced;
     border-color: #00aced;
+    &:hover{
+        background-color: #00aced !important;
+        border-color: #00aced !important;
+        opacity: 0.7;
+    }
 }
 
 #ht-featured-post-section .ht-section-title-tagline,

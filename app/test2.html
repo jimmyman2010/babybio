@@ -1,0 +1,28 @@
+<html>
+<body>
+<form id="file">
+    <input type="file" id="loadfile" />
+    <input type="button" value="Image Size" onclick="testSize()" />
+</form>
+<script type="text/javascript">
+
+    function testSize(){
+        var browserInfo = navigator.userAgent.toLowerCase();
+
+        if(browserInfo.indexOf("msie") > -1){
+            /* IE */
+            var filepath = document.getElementById('loadfile').value;
+            alert(filepath + " Test ");
+            var myFSO = new ActiveXObject("Scripting.FileSystemObject");
+            var thefile = myFSO.getFile(filepath);
+            var imgbytes = thefile.size;
+            alert( "name " +  thefile.name + "Size " +  thefile.size );
+        }else{
+            /* Other */
+            var file = document.getElementById('loadfile').files[0];
+            alert( "name " +  file.name + "Size " +  file.size );
+        }
+    }
+</script>
+</body>
+</html>

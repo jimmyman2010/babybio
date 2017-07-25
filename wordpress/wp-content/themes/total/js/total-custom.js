@@ -19,11 +19,12 @@ jQuery(function($){
   }
 
   if($('#ht-bx-slider .ht-slide').length > 0){
+      $('#ht-bx-slider .ht-slide').show();
     $('#ht-bx-slider').bxSlider({
         'pager':false,
         'auto' : true,
         'mode' : 'fade',
-        'pause' : 5000,
+        'pause' : 10000
     });
   }
 
@@ -31,14 +32,14 @@ jQuery(function($){
       'controls' : true,
       'pager': false,
       'auto' : true,
-      'pause' : 5000,
+      'pause' : 10000,
       'mode' : 'fade',
       'prevText' : '<i class="fa fa-angle-left" aria-hidden="true"></i>',
       'nextText' : '<i class="fa fa-angle-right" aria-hidden="true"></i>',
   });
 
   $(".ht_client_logo_slider").owlCarousel({
-      autoPlay: 4000,
+      autoPlay: 8000,
       items : 5,
       itemsDesktop : [1199,5],
       itemsDesktopSmall : [979,4],

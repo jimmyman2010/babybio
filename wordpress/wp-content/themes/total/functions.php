@@ -196,7 +196,7 @@ if ( ! function_exists( 'total_fonts_url' ) ) :
 function total_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
-	$subsets   = 'latin,latin-ext';
+	$subsets   = 'latin,latin-ext,vietnamese';
 
 	/*
 	 * Translators: If there are characters in your language that are not supported

@@ -592,25 +592,28 @@ a:active {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 15px;
-}
-
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 15px;
-}
-
-.aligncenter {
+.alignleft, .alignright .aligncenter {
 	clear: both;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 10px;
 }
+@media screen and (min-width: 768px) {
+	.alignleft {
+		clear: none;
+		display: inline;
+		float: left;
+		margin-right: 15px;
+	}
 
+	.alignright {
+		clear: none;
+		display: inline;
+		float: right;
+		margin-left: 15px;
+	}
+}
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -2920,8 +2923,22 @@ object {
 	}
 }
 
+@media screen and (min-width: 768px){
+	.post-354 .entry-content h4 img.alignleft, .post-62 .entry-content h4 img.alignleft{
+		width: 35%;
+	}
+	.post-354 .entry-content h4 ~ ol, .post-62 .entry-content h4 ~ ul,
+	.post-354 .entry-content h4 ~ ul, .post-62 .entry-content h4 ~ ol{
+		float: right;
+		width: 55%;
+	}
+}
+
 @media screen and (min-width: 1001px){
 	.ht-main-navigation .ht-menu{
 		display: block !important;
+	}
+	.post-354 .entry-content h4 img.alignleft, .post-62 .entry-content h4 img.alignleft{
+		width: 37%;
 	}
 }
